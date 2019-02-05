@@ -1,7 +1,5 @@
 ---
-layout: page
+layout: home
 title: Tutorials
 permalink: /tutorials/
 ---
-
-This shall contain a list of tutorials.

@@ -18,8 +18,8 @@ email: https://lists.01.org/mailman/listinfo/tpm2
 description: >- # this means to ignore newlines until "baseurl:"
   The community around the TPM Software Stack 2.0 and its tpm2-tss open source
   implementation and all the tools and software that build upon it.
-#baseurl: "" # the subpath of your site, e.g. /blog
-#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://tpm2-software.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username:  tpm2-software
 
@@ -28,6 +28,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-sitemap
+  - jekyll-seo-tag
 #  - jekyll-feed
 
 # Exclude from processing.
