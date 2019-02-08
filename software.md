@@ -14,11 +14,13 @@ permalink: /software/
 - [Clevis](https://github.com/latchset/clevis Howto: https://blog.dowhile0.org/2017/10/18/automatic-luks-volumes-unlocking-using-a-tpm2-chip/)
 - [TPM2-TOTP](https://github.com/tpm2-software/tpm2-totp)
 
-# Projects requiring TPM 2.0 support
+# Projects in progress
+- NetworkManager/wpa_supplicant 802.1X via (https://github.com/opencryptoki/opencryptoki)
+
+# Good canidates for addition of TPM 2.0 support
 - OpenVPN
 - WireGuard
 - Tinc
-- NetworkManager/wpa_supplicant 802.1X
 - gnome-keyring
 - KDE wallet
 - GNU-TLS
