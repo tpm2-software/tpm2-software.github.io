@@ -11,7 +11,7 @@ permalink: /software/
 - [OpenConnect](http://git.infradead.org/users/dwmw2/openconnect.git/blob/tpm2:/gnutls_tpm2_esys.c)
 - [cryptsetup/LUKS](https://gitlab.com/cryptsetup/cryptsetup/merge_requests/51)
 - [StrongSwan](https://wiki.strongswan.org/projects/strongswan/wiki/TPMPlugin)
-- [Clevis](https://github.com/latchset/clevis Howto: https://blog.dowhile0.org/2017/10/18/automatic-luks-volumes-unlocking-using-a-tpm2-chip/)
+- [Clevis](https://github.com/latchset/clevis) ([Howto](https://blog.dowhile0.org/2017/10/18/automatic-luks-volumes-unlocking-using-a-tpm2-chip/))
 - [TPM2-TOTP](https://github.com/tpm2-software/tpm2-totp)
 
 # Projects requiring TPM 2.0 support
