@@ -8,7 +8,7 @@ permalink: /software/
 - [TPM2-Tools](https://github.com/tpm2-software/tpm2-tools)
 - [PKCS11](https://github.com/tpm2-software/tpm2-pkcs11)
 - [OpenSSL](https://github.com/tpm2-software/tpm2-tss-engine)
-- [OpenConnect](http://git.infradead.org/users/dwmw2/openconnect.git/blob/tpm2:/gnutls_tpm2_esys.c)
+- [OpenConnect](http://git.infradead.org/users/dwmw2/openconnect.git/) [Docs](http://www.infradead.org/openconnect/tpm.html)
 - [cryptsetup/LUKS](https://gitlab.com/cryptsetup/cryptsetup/merge_requests/51)
 - [StrongSwan](https://wiki.strongswan.org/projects/strongswan/wiki/TPMPlugin)
 - [Clevis](https://github.com/latchset/clevis) ([Howto](https://blog.dowhile0.org/2017/10/18/automatic-luks-volumes-unlocking-using-a-tpm2-chip/))
