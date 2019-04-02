@@ -23,6 +23,7 @@ permalink: /software/
 - KDE wallet
 - GNU-TLS
 - WebCrypto (Firefox, WebKit, Chromium)
+- WebAuthn ([Firefox](https://github.com/mozilla/gecko-dev/tree/master/dom/webauthn), WebKit, Chromium)
 - OpenSSH HostKey ((non-)PKCS11), ClientKey ((non-)PKCS11)
 - Wireshark TPM Cmd/Rsp/Buffer with TCTI-PCAP module or /dev/tpmrm0 sniffing (partial, TPM-Headers only yet)
 
