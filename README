@@ -9,13 +9,14 @@ test it locally first.
 ## Prerequisits
 
 ```
-$ sudo gem install jekyll bundler
+$ sudo gem install bundler
+$ sudo bunde install #This needs to happen inside the directory
 ```
 
 ## Build
 
 ```
-$ jekyll serve
+$ bundle exec jekyll serve --incremental
 ```
 
 ## LICENSE
