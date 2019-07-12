@@ -19,6 +19,90 @@ $ sudo bunde install #This needs to happen inside the directory
 $ bundle exec jekyll serve --incremental
 ```
 
+## TPM2 Software Stack Diagram
+
+```mermaidjs
+graph BT
+
+tss[TSS: tpm2-tss]
+tcti-mssim[Mssim TCTI: tpm2-tss: tcti-mssim]
+tcti-device[Device TCTI: tpm2-tss: tcti-device]
+
+simulator[TPM 2.0 Simulator]
+hardware[TPM 2.0 Hardware]
+
+uefi[UEFI]
+tcti-uefi[UEFI TCTI: tpm2-tcti-uefi]
+
+linux[Linux]
+tpm0[Kernel Driver: /dev/tpm0]
+tpmrm0[Kernel Resource Manager: /dev/tpmrm0]
+
+abrmd[Userspace Resource Manager: tpm2-abrmd]
+tcti-tabrmd[Userspace Resource Manager TCTI: tpm2-abrmd: tcti-tabrmd]
+
+engine[OpenSSL Engine: tpm2-tss-engine]
+totp[Device to Human attestation: tpm2-totp]
+pkcs11[PKCS#11 Interface: tpm2-pkcs11]
+tools[Command Line Tools: tpm2-tools]
+swig[SWIG Interfaces: tpm2-swig]
+pytss[TSS Python Bindings: tpm2-pytss]
+
+subgraph Legend
+legend-TPM[TPM]
+legend-OS[Ring 0]
+legend-RM[Resource Manager]
+legend-TCTI[TCTI]
+legend-Library[Library]
+legend-Module[.so]
+legend-EndUser[End User]
+end
+
+classDef TPM fill:#5ff,stroke:#333;
+classDef OS fill:#f9f,stroke:#333;
+classDef RM fill:#f85,stroke:#333;
+classDef TCTI fill:#af6,stroke:#333;
+classDef Library fill:#7da,stroke:#333;
+classDef Module fill:#def,stroke:#333;
+classDef EndUser fill:#ffa,stroke:#333;
+
+class legend-TPM,simulator,hardware TPM;
+class legend-OS,uefi,linux,tpm0 OS;
+class legend-RM,tpmrm0,abrmd RM;
+class legend-TCTI,tcti-uefi,tcti-mssim,tcti-device,tcti-tabrmd TCTI;
+class legend-Library,tss,pytss Library;
+class legend-Module,engine,pkcs11 Module;
+class legend-EndUser,totp,tools EndUser;
+
+simulator --> tcti-mssim
+hardware --> uefi
+hardware --> linux
+linux --> tpm0
+linux --> tpmrm0
+
+uefi --> tcti-uefi
+tpm0 --> tcti-device
+tpmrm0 --> tcti-device
+
+tcti-device--> abrmd
+abrmd --> tcti-tabrmd
+
+tcti-uefi --> tss
+tcti-mssim --> tss
+tcti-device --> tss
+tcti-tabrmd --> tss
+
+tss --> engine
+tss --> totp
+tss --> pkcs11
+tss --> tools
+tss --> swig
+swig--> pytss
+pytss --> pkcs11
+```
+
+Edit in Live editor: https://mermaidjs.github.io/mermaid-live-editor/
+
 ## LICENSE
 
 All content of this repository is licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)

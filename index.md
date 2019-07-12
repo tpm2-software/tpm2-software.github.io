@@ -40,3 +40,7 @@ merge requests on GitHub
 
 Also each of the core and non-core project has a lot of enhancement issues that
 are great for getting started in their issue trackers.
+
+# TPM2 Software Stack
+
+![Stack Chart](tpm2_stack.svg)
