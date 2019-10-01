@@ -35,5 +35,6 @@ permalink: /software/
 - empathy/telepathy jabber (via PKCS11?)
 - GnuPG (also leads to git tag and release signing)
 - Telegram desktop
+- [GNOME Keyring](https://wiki.gnome.org/Projects/GnomeKeyring/SecurityFAQ#I_have_a_TPM_.28Trusted_Platform_Module.29_chip_on_my_machine._Can_I_use_it_to_protect_my_passwords.3F)
 
 Please feel free to also add notes to this list wrt means of integration, e.g. if a project could be enabled using tpm2-pkcs11 and p11-kit because it already provides a pkcs11 interfaces for authentication.
