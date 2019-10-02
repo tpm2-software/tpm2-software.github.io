@@ -5,6 +5,7 @@ permalink: /software/
 ---
 
 # Software with TPM 2.0 support
+- [tpm2-tss](https://github.com/tpm2-software/tpm2-tss)
 - [TPM2-Tools](https://github.com/tpm2-software/tpm2-tools)
 - [PKCS11](https://github.com/tpm2-software/tpm2-pkcs11) (wip)
 - [OpenSSL](https://github.com/tpm2-software/tpm2-tss-engine)
