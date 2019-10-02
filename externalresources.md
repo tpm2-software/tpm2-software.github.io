@@ -18,3 +18,10 @@ permalink: /external/
 - Trusted Computing Platforms: TPM2.0 in Context by Graeme Proudler, Liqun Chen, et al, 2016
 - A Practical Guide to TPM 2.0: Using the Trusted Platform Module in the New Age of Security by Will Arthur and David Challener, 2015
 
+# Specifications
+- [TCG TSS 2.0 System Level API (SAPI) Specification](https://trustedcomputinggroup.org/resource/tcg-tss-2-0-system-level-api-sapi-specification/) [latest](https://trustedcomputinggroup.org/wp-content/uploads/TSS_SAPI_v1p1_r29_pub_20190806.pdf)
+- [TCG TSS 2.0 Response Code API Specification](https://trustedcomputinggroup.org/resource/tcg-tss-2-0-response-code-api-specification/) [latest](https://trustedcomputinggroup.org/wp-content/uploads/TCG_TSS_RC_v1p0_r12_pub.pdf)
+- [TCG TSS 2.0 TAB and Resource Manager](https://trustedcomputinggroup.org/resource/tss-tab-and-resource-manager/) [latest](https://trustedcomputinggroup.org/wp-content/uploads/TSS_2p0_TAB_ResourceManager_v1p0_r18_04082019_pub.pdf)
+- [TCG TSS 2.0 TPM Command Transmission Interface (TCTI) API Specification](https://trustedcomputinggroup.org/resource/tss-tcti-specification/) [latest](https://trustedcomputinggroup.org/wp-content/uploads/TSS_TCTI_v1p0_r12_04082019_pub.pdf) [draft](https://trustedcomputinggroup.org/wp-content/uploads/TCG_TSS_TCTI_v1p0_r17_pubrev.pdf)
+- [TCG TSS 2.0 Overview and Common Structures Specification](https://trustedcomputinggroup.org/resource/tss-overview-common-structures-specification/) [draft](https://trustedcomputinggroup.org/wp-content/uploads/TSS_Overview_Common_Structures_Version-0.9_Revision-03_Review_030918.pdf)
+- [TCG TSS 2.0 Enhanced System API (ESAPI) Specification](https://trustedcomputinggroup.org/resource/tcg-tss-2-0-enhanced-system-api-esapi-specification/) [draft](https://trustedcomputinggroup.org/wp-content/uploads/TSS_ESAPI_Version-0.9_Revision-04_reviewEND030918.pdf)
