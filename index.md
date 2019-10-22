@@ -26,7 +26,7 @@ The core software of this community can be found at
 - [https://github.com/tpm2-software](https://github.com/tpm2-software)
 
 The mailing list for this community can be found at
-- [https://lists.01.org/mailman/listinfo/tpm2](https://lists.01.org/mailman/listinfo/tpm2)
+- [https://lists.01.org/postorius/lists/tpm2.lists.01.org/](https://lists.01.org/postorius/lists/tpm2.lists.01.org/)
 
 The gitter can be found at the bottom right or at
 - [https://gitter.im/tpm2-software/community](https://gitter.im/tpm2-software/community)
