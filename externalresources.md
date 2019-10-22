@@ -4,6 +4,13 @@ title: External
 permalink: /external/
 ---
 
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'tpm2-software/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
 # Presentations at developer conferences
 - [tpm2-software.github.io - Enabling the TPM2.0 Ecosystem in Linux](https://osseu19.sched.com/event/TLKX/tpm2-softwaregithubio-enabling-the-tpm20-ecosystem-in-linux-peter-huewe-infineon-technologies-ag) Presentation at Open Source Summit Europe 2019, Lyon, France
 - [Enabling TPM based system security features](https://www.linuxplumbersconf.org/event/4/contributions/302/) Presentation at LPC 2019, Lisbon, Portugal [Slides](https://www.linuxplumbersconf.org/event/4/contributions/302/attachments/343/572/LPC2019.pdf)

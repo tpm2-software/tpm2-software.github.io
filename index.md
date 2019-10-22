@@ -6,6 +6,13 @@ layout: page
 title: ""
 ---
 
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'tpm2-software/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
 # Welcome to the tpm2-software community page.
 
 This is the come for information related to the use of the TPM2 using the TPM2
@@ -20,6 +27,9 @@ The core software of this community can be found at
 
 The mailing list for this community can be found at
 - [https://lists.01.org/mailman/listinfo/tpm2](https://lists.01.org/mailman/listinfo/tpm2)
+
+The gitter can be found at the bottom right or at
+- [https://gitter.im/tpm2-software/community](https://gitter.im/tpm2-software/community)
 
 # Contributing
 
