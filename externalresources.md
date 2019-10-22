@@ -1,6 +1,6 @@
 ---
 layout: page
-title: External resources
+title: External
 permalink: /external/
 ---
 
