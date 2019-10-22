@@ -5,10 +5,10 @@ permalink: /software/
 ---
 
 # Software with TPM 2.0 support
-- [tpm2-tss](https://github.com/tpm2-software/tpm2-tss)
-- [TPM2-Tools](https://github.com/tpm2-software/tpm2-tools)
+- [tpm2-tss](https://github.com/tpm2-software/tpm2-tss) [![latest packaged version(s)](https://repology.org/badge/latest-versions/tpm2-tss.svg)](https://repology.org/project/tpm2-tss/versions)  [![Packaging status](https://repology.org/badge/tiny-repos/tpm2-tss.svg)](https://repology.org/project/tpm2-tss/versions)
+- [TPM2-Tools](https://github.com/tpm2-software/tpm2-tools) [![latest packaged version(s)](https://repology.org/badge/latest-versions/tpm2-tools.svg)](https://repology.org/project/tpm2-tools/versions) [![Packaging status](https://repology.org/badge/tiny-repos/tpm2-tools.svg)](https://repology.org/project/tpm2-tools/versions)
 - [PKCS11](https://github.com/tpm2-software/tpm2-pkcs11) (wip)
-- [OpenSSL](https://github.com/tpm2-software/tpm2-tss-engine)
+- [OpenSSL](https://github.com/tpm2-software/tpm2-tss-engine) [![latest packaged version(s)](https://repology.org/badge/latest-versions/tpm2-tss-engine.svg)](https://repology.org/project/tpm2-tss-engine/versions) [![Packaging status](https://repology.org/badge/tiny-repos/tpm2-tss-engine.svg)](https://repology.org/project/tpm2-tss-engine/versions)
 - [OpenConnect](http://git.infradead.org/users/dwmw2/openconnect.git/) [Docs](http://www.infradead.org/openconnect/tpm.html)
 - [cryptsetup/LUKS](https://gitlab.com/cryptsetup/cryptsetup/merge_requests/51) (wip)
 - [StrongSwan](https://wiki.strongswan.org/projects/strongswan/wiki/TPMPlugin)
