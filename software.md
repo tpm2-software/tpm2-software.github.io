@@ -22,6 +22,7 @@ permalink: /software/
 - [Clevis](https://github.com/latchset/clevis) ([Howto](https://blog.dowhile0.org/2017/10/18/automatic-luks-volumes-unlocking-using-a-tpm2-chip/))
 - [TPM2-TOTP](https://github.com/tpm2-software/tpm2-totp) [![latest packaged version(s)](https://repology.org/badge/latest-versions/tpm2-totp.svg)](https://repology.org/project/tpm2-totp/versions) [![Packaging status](https://repology.org/badge/tiny-repos/tpm2-totp.svg)](https://repology.org/project/tpm2-totp/versions)
 - [LVFS / fwupd](https://fwupd.org/): [Post1](https://blogs.gnome.org/hughsie/2018/12/14/firmware-attestation/), [Post2](https://blogs.gnome.org/hughsie/2019/04/10/using-a-client-certificate-to-set-the-attestation-checksum/)
+- [ESAPI Rust Wrapper](https://crates.io/crates/tss-esapi) [Docs](https://docs.rs/tss-esapi/1.0.1/tss_esapi/)
 
 # Projects requiring TPM 2.0 support
 - OpenVPN
