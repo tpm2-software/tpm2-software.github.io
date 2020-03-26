@@ -31,6 +31,11 @@ The mailing list for this community can be found at
 The gitter can be found at the bottom right or at
 - [https://gitter.im/tpm2-software/community](https://gitter.im/tpm2-software/community)
 
+We also have an IRC channel #tpm2.0-tss at freenode.net
+
+And a slack project at
+- [https://tpm2-tss.slack.com](https://tpm2-tss.slack.com)
+
 # Contributing
 
 Contributions to this site are always wanted and highly welcome -- from
