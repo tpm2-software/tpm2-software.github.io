@@ -24,6 +24,9 @@ permalink: /external/
 # Teaching
 - [Introduction To Trusted Computing by Ariel Segall](http://opensecuritytraining.info/IntroToTrustedComputing.html) [Videos](https://www.youtube.com/playlist?list=PLUFkSN0XLZ-kBgdLhorJD6BR66D5kGoUV)
 
+# Tutorials
+- [Interative Tutorial](https://google.github.io/tpm-js/)
+
 # Books
 - Trusted Computing Platforms: TPM2.0 in Context by Graeme Proudler, Liqun Chen, et al, 2016
 - A Practical Guide to TPM 2.0: Using the Trusted Platform Module in the New Age of Security by Will Arthur and David Challener, 2015
