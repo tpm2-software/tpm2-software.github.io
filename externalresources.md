@@ -29,7 +29,7 @@ permalink: /external/
 
 # Books
 - Trusted Computing Platforms: TPM2.0 in Context by Graeme Proudler, Liqun Chen, et al, 2016
-- A Practical Guide to TPM 2.0: Using the Trusted Platform Module in the New Age of Security by Will Arthur and David Challener, 2015
+- [A Practical Guide to TPM 2.0](https://link.springer.com/book/10.1007/978-1-4302-6584-9): Using the Trusted Platform Module in the New Age of Security by Will Arthur and David Challener, 2015
 
 # Specifications
 - [TPM 2.0 Library Specification](https://trustedcomputinggroup.org/resource/tpm-library-specification/) [part1](https://trustedcomputinggroup.org/wp-content/uploads/TPM-Rev-2.0-Part-1-Architecture-01.38.pdf) [part2](https://trustedcomputinggroup.org/wp-content/uploads/TPM-Rev-2.0-Part-2-Structures-01.38.pdf) [part3](https://trustedcomputinggroup.org/wp-content/uploads/TPM-Rev-2.0-Part-3-Commands-01.38-code.pdf) [part4](https://trustedcomputinggroup.org/wp-content/uploads/TPM-Rev-2.0-Part-4-Supporting-Routines-01.38-code.pdf) [Errata](https://trustedcomputinggroup.org/wp-content/uploads/TPM2.0-Library-Spec-v1.38-Errata_v1.9_published.pdf)
