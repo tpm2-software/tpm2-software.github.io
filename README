@@ -8,14 +8,41 @@ test it locally first.
 
 ## Prerequisits
 
+Ubuntu
+
+```console
+$ sudo apt-get -y install ruby ruby-dev build-essential libz-dev
 ```
-$ sudo gem install bundler
-$ sudo bunde install #This needs to happen inside the directory
+
+Fedora
+
+```console
+$ sudo dnf -y install ruby ruby-devel zlib-devel gcc g++ make redhat-rpm-config
+```
+
+Install bundler, which is used to install the dependencies specifically for
+building this repo.
+
+```console
+$ gem install bundler
+```
+
+You may need to add the place gem's puts binaries to your `PATH`.
+
+```console
+$ export PATH="${HOME}/bin:${PATH}"
+```
+
+Make sure you're in the top level directory of this repo when you run the next
+command.
+
+```console
+$ bundle install
 ```
 
 ## Build
 
-```
+```console
 $ bundle exec jekyll serve --incremental
 ```
 
