@@ -10,7 +10,7 @@ test it locally first.
 
 ```
 $ sudo gem install bundler
-$ sudo bunde install #This needs to happen inside the directory
+$ sudo bundle install #This needs to happen inside the directory
 ```
 
 ## Build
