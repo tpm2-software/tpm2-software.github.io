@@ -68,7 +68,7 @@ demonstration purpose. It has not been evaluated for production use.***
 something exists or is the case. It is the action of being a witness to or
 formally certifying something.”<br>
 
-The [literary-defintion]((https://www.lexico.com/en/definition/attestation))
+The [literary-definition](https://www.lexico.com/en/definition/attestation)
 very much applies in the context of this tutorial which discusses attesting of
 the PCR contents in a TPM.
 
