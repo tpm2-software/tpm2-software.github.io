@@ -7,7 +7,7 @@
     "properties": {
         "description": {
             "title": "description",
-            "description": "",
+            "description": "The human readable description of the policy",
             "type": "string"
         },
         "policyDigests": {
@@ -174,7 +174,7 @@
                                      "maximum": 24 } },
         "List of PCRs for hashAlg": {
             "title": "List of PCRs for hashAlg",
-            "description": "Table 86 - Definition of List of PCRs for hashAlg StructureTable 86 - Definition of List of PCRs for hashAlg Structure",
+            "description": "Definition of List of PCRs for hashAlg Structure",
             "type": "object",
             "required": [
                 "hash",
@@ -213,67 +213,67 @@
         "TPM2B_ID_OBJECT": { "title": "TPM2B_ID_OBJECT", "description": "", "$ref": "#/definitions/TPM2B_GENERIC" },
         "TPM2B_CONTEXT_SENSITIVE": { "title": "TPM2B_CONTEXT_SENSITIVE", "description": "", "$ref": "#/definitions/TPM2B_GENERIC" },
         "TPM2B_CONTEXT_DATA": { "title": "TPM2B_CONTEXT_DATA", "description": "", "$ref": "#/definitions/TPM2B_GENERIC" },
-        "TPMS_SCHEME_HMAC": { 
+        "TPMS_SCHEME_HMAC": {
             "title": "TPMS_SCHEME_HMAC", "description": "", "$ref": "#/definitions/TPMS_SCHEME_HASH"
         },
-        "TPMS_SIG_SCHEME_RSASSA": { 
+        "TPMS_SIG_SCHEME_RSASSA": {
             "title": "TPMS_SIG_SCHEME_RSASSA", "description": "", "$ref": "#/definitions/TPMS_SCHEME_HASH"
         },
-        "TPMS_SIG_SCHEME_RSAPSS": { 
+        "TPMS_SIG_SCHEME_RSAPSS": {
             "title": "TPMS_SIG_SCHEME_RSAPSS", "description": "", "$ref": "#/definitions/TPMS_SCHEME_HASH"
         },
-        "TPMS_SIG_SCHEME_ECDSA": { 
-            "title": "TPMS_SIG_SCHEME_ECDSA", "description": "", "$ref": "#/definitions/TPMS_SCHEME_HASH "
+        "TPMS_SIG_SCHEME_ECDSA": {
+            "title": "TPMS_SIG_SCHEME_ECDSA", "description": "", "$ref": "#/definitions/TPMS_SCHEME_HASH"
         },
-        "TPMS_SIG_SCHEME_SM2": { 
-            "title": "TPMS_SIG_SCHEME_SM2", "description": "", "$ref": "#/definitions/TPMS_SCHEME_HASH "
+        "TPMS_SIG_SCHEME_SM2": {
+            "title": "TPMS_SIG_SCHEME_SM2", "description": "", "$ref": "#/definitions/TPMS_SCHEME_HASH"
         },
-        "TPMS_SIG_SCHEME_ECSCHNORR": { 
-            "title": "TPMS_SIG_SCHEME_ECSCHNORR", "description": "", "$ref": "#/definitions/TPMS_SCHEME_HASH "
+        "TPMS_SIG_SCHEME_ECSCHNORR": {
+            "title": "TPMS_SIG_SCHEME_ECSCHNORR", "description": "", "$ref": "#/definitions/TPMS_SCHEME_HASH"
         },
-        "TPMS_SIG_SCHEME_ECDAA": { 
+        "TPMS_SIG_SCHEME_ECDAA": {
             "title": "TPMS_SIG_SCHEME_ECDAA", "description": "", "$ref": "#/definitions/TPMS_SCHEME_ECDAA"
         },
-        "TPMS_ENC_SCHEME_OAEP": { 
+        "TPMS_ENC_SCHEME_OAEP": {
             "title": "TPMS_ENC_SCHEME_OAEP", "description": "", "$ref": "#/definitions/TPMS_SCHEME_HASH"
         },
-        "TPMS_ENC_SCHEME_RSAES": { 
+        "TPMS_ENC_SCHEME_RSAES": {
             "title": "TPMS_ENC_SCHEME_RSAES", "description": "", "$ref": "#/definitions/TPMS_EMPTY"
         },
-        "TPMS_KEY_SCHEME_ECDH": { 
+        "TPMS_KEY_SCHEME_ECDH": {
             "title": "TPMS_KEY_SCHEME_ECDH", "description": "", "$ref": "#/definitions/TPMS_SCHEME_HASH"
         },
-        "TPMS_KEY_SCHEME_ECMQV": { 
+        "TPMS_KEY_SCHEME_ECMQV": {
             "title": "TPMS_KEY_SCHEME_ECMQV", "description": "", "$ref": "#/definitions/TPMS_SCHEME_HASH"
         },
-        "TPMS_SCHEME_MGF1": { 
+        "TPMS_SCHEME_MGF1": {
             "title": "TPMS_SCHEME_MGF1", "description": "", "$ref": "#/definitions/TPMS_SCHEME_HASH"
         },
-        "TPMS_SCHEME_KDF1_SP800_56A": { 
+        "TPMS_SCHEME_KDF1_SP800_56A": {
             "title": "TPMS_SCHEME_KDF1_SP800_56A", "description": "", "$ref": "#/definitions/TPMS_SCHEME_HASH"
         },
-        "TPMS_SCHEME_KDF2": { 
+        "TPMS_SCHEME_KDF2": {
             "title": "TPMS_SCHEME_KDF2", "description": "", "$ref": "#/definitions/TPMS_SCHEME_HASH"
         },
-        "TPMS_SCHEME_KDF1_SP800_108": { 
+        "TPMS_SCHEME_KDF1_SP800_108": {
             "title": "TPMS_SCHEME_KDF1_SP800_108", "description": "", "$ref": "#/definitions/TPMS_SCHEME_HASH"
         },
-        "TPMS_SIGNATURE_RSASSA": { 
+        "TPMS_SIGNATURE_RSASSA": {
             "title": "TPMS_SIGNATURE_RSASSA", "description": "", "$ref": "#/definitions/TPMS_SIGNATURE_RSA"
         },
-        "TPMS_SIGNATURE_RSAPSS": { 
+        "TPMS_SIGNATURE_RSAPSS": {
             "title": "TPMS_SIGNATURE_RSAPSS", "description": "", "$ref": "#/definitions/TPMS_SIGNATURE_RSA"
         },
-        "TPMS_SIGNATURE_ECDSA": { 
+        "TPMS_SIGNATURE_ECDSA": {
             "title": "TPMS_SIGNATURE_ECDSA", "description": "", "$ref": "#/definitions/TPMS_SIGNATURE_ECC"
         },
-        "TPMS_SIGNATURE_ECDAA": { 
+        "TPMS_SIGNATURE_ECDAA": {
             "title": "TPMS_SIGNATURE_ECDAA", "description": "", "$ref": "#/definitions/TPMS_SIGNATURE_ECC"
         },
-        "TPMS_SIGNATURE_SM2": { 
+        "TPMS_SIGNATURE_SM2": {
             "title": "TPMS_SIGNATURE_SM2", "description": "", "$ref": "#/definitions/TPMS_SIGNATURE_ECC"
         },
-        "TPMS_SIGNATURE_ECSCHNORR": { 
+        "TPMS_SIGNATURE_ECSCHNORR": {
             "title": "TPMS_SIGNATURE_ECSCHNORR", "description": "", "$ref": "#/definitions/TPMS_SIGNATURE_ECC"
         },
         "Delete_Policy": {
@@ -299,6 +299,20 @@
                 }
             ]
         },
+        "TPMU_RSA_SCHEME": {
+            "title": "TPMU_RSA_SCHEME",
+            "description": "",
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/TPMS_SIG_SCHEME_RSASSA"
+                },
+                {
+                    "$ref": "#/definitions/TPMS_SIG_SCHEME_RSAPSS"
+                }
+            ]
+        },
+        "TPMS_EMPTY": {
+        },
         "PhysicalPresence": {
             "title": "PhysicalPresence",
             "description": "Policy type PhysicalPresence",
@@ -310,7 +324,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "PhysicalPresence"
+                        "PhysicalPresence","PHYSICALPRESENCE","PolicyPhysicalPresence","POLICYPHYSICALPRESENCE"
                     ],
                     "default": "PhysicalPresence"
                 },
@@ -332,7 +346,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "Signed"
+                        "Signed","SIGNED","PolicySigned","POLICYSIGNED"
                     ],
                     "default": "Signed"
                 },
@@ -395,7 +409,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "Secret"
+                        "Secret","SECRET","PolicySecret","POLICYSECRET"
                     ],
                     "default": "Secret"
                 },
@@ -449,7 +463,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "Locality"
+                        "Locality","LOCALITY","PolicyLocality","POLICYLOCALITY"
                     ],
                     "default": "Locality"
                 },
@@ -477,7 +491,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "NV"
+                        "NV","PolicyNV","POLICYNV"
                     ],
                     "default": "NV"
                 },
@@ -532,7 +546,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "CounterTimer"
+                        "CounterTimer","COUNTERTIMER","PolicyCounterTimer","POLICYCOUNTERTIMER"
                     ],
                     "default": "CounterTimer"
                 },
@@ -571,7 +585,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "CommandCode"
+                        "CommandCode","COMMANDCODE","PolicyCommandCode","POLICYCOMMANDCODE"
                     ],
                     "default": "CommandCode"
                 },
@@ -599,7 +613,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "CpHash"
+                        "CpHash","CPHASH","PolicyCpHash","POLICYCPHASH"
                     ],
                     "default": "CpHash"
                 },
@@ -626,7 +640,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "NameHash"
+                        "NameHash","NAMEHASH","PolicyNameHash","POLICYNAMEHASH"
                     ],
                     "default": "NameHash"
                 },
@@ -673,7 +687,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "DuplicationSelect"
+                        "DuplicationSelect","DUPLICATIONSELECT","PolicyDuplicationSelect","POLICYDUPLICATIONSELECT"
                     ],
                     "default": "DuplicationSelect"
                 },
@@ -704,51 +718,98 @@
                 }
             }
         },
-        "PolicyAuthorization": {
-            "title": "PolicyAuthorization",
-            "description": "Policy type PolicyAuthorization",
+        "PolicyAuthorizationPEM": {
+            "title": "PolicyAuthorizationPEM",
+            "description": "Public key and signature for an approved policy.",
             "type": "object",
             "required": [
                 "type",
                 "policyRef",
                 "keyPEMhashAlg",
-                "keyPEM",
+                "key",
                 "signature"
-
             ],
             "properties": {
                 "type": {
-                    "title": "type",
-                    "description": "",
                     "type": "string",
+                    "enum": [
+                        "pem", "PEM"
+                    ],
                     "default": "pem"
                 },
                 "policyRef": {
                     "title": "policyRef",
-                    "description": "",
+                    "description": "Reference value for policy to be searched.",
                     "$ref": "#/definitions/TPM2B_NONCE"
                 },
                 "keyPEMhashAlg": {
                     "title": "keyPEMhashAlg",
-                    "description": "",
+                    "description": "Hash used to compute name of the signing key.",
                     "$ref": "#/definitions/TPMI_ALG_HASH"
                 },
-                "keyPEM": {
-                    "title": "keyPEM",
-                    "description": "",
+                "key": {
+                    "title": "key",
+                    "description": "Signing key in PEM format.",
                     "type": "string"
                 },
                 "signature": {
                     "title": "signature",
-                    "description": "",
+                    "description": "Signature of approved policy and policy reference.",
                     "$ref": "#/definitions/TPM2B_MAX_BUFFER"
                 },
                 "rsaScheme": {
                     "title": "rsaScheme",
-                    "description": "",
+                    "description": "Used signing scheme for RSA keys.",
                     "$ref": "#/definitions/TPMT_RSA_SCHEME"
                 }
             }
+        },
+        "PolicyAuthorizationTPM": {
+            "title": "PolicyAuthorizationTPM",
+            "description": "Public key and signature for an approved policy.",
+            "type": "object",
+            "required": [
+                "type",
+                "policyRef",
+                "key",
+                "signature"
+            ],
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "tpm", "TPM"
+                    ],
+                    "default": "tpm"
+                },
+                "policyRef": {
+                    "title": "policyRef",
+                    "description": "Reference value for policy to be searched.",
+                    "$ref": "#/definitions/TPM2B_NONCE"
+                },
+                "key": {
+                    "title": "key",
+                    "description": "Signing key in TPM format.",
+                    "$ref":  "#/definitions/TPMT_PUBLIC"
+                },
+                "signature": {
+                    "title": "signature",
+                    "description": "Signature of approved policy and policy reference.",
+                    "$ref": "#/definitions/TPMT_SIGNATURE"
+                }
+            }
+        },
+        "PolicyAuthorization": {
+            "title": "PolicyAuthorization",
+            "description": "",
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/PolicyAuthorizationPEM"
+                },
+                {
+                    "$ref": "#/definitions/PolicyAuthorizationTPM"
+                }
+            ]
         },
         "Authorize": {
             "title": "Authorize",
@@ -761,7 +822,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "Authorize"
+                        "Authorize","AUTHORIZE","PolicyAuthorize","POLICYAUTHORIZE"
                     ],
                     "default": "Authorize"
                 },
@@ -813,7 +874,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "AuthValue"
+                        "AuthValue","AUTHVALUE","PolicyAuthValue","POLICYAUTHVALUE"
                     ],
                     "default": "AuthValue"
                 },
@@ -835,7 +896,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "Password"
+                        "Password","PASSWORD","PolicyPassword","POLICYPASSWORD"
                     ],
                     "default": "Password"
                 },
@@ -857,7 +918,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "NvWritten"
+                        "NvWritten","NvWritten","PolicyNvWritten","POLICYNvWritten"
                     ],
                     "default": "NvWritten"
                 },
@@ -884,7 +945,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "Template"
+                        "Template","TEMPLATE","PolicyTemplate","POLICYTEMPLATE"
                     ],
                     "default": "Template"
                 },
@@ -911,7 +972,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "AuthorizeNV"
+                        "AuthorizeNV","AUTHORIZENV","PolicyAuthorizeNV","POLICYAUTHORIZENV"
                     ],
                     "default": "AuthorizeNV"
                 },
@@ -939,7 +1000,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "Action"
+                        "Action","ACTION","PolicyAction","POLICYACTION"
                     ],
                     "default": "Action"
                 },
@@ -983,10 +1044,10 @@
                 {
                     "title": "sha1",
                     "properties": {
-                        "hashAlg": { 
+                        "hashAlg": {
                             "type": "string",
                             "enum": [
-                                "sha1"
+                                "sha1","SHA1"
                             ]
                         },
                         "digest": {
@@ -998,10 +1059,10 @@
                 {
                     "title": "sha256",
                     "properties": {
-                        "hashAlg": { 
+                        "hashAlg": {
                             "type": "string",
                             "enum": [
-                                "sha256"
+                                "sha256","SHA256"
                             ]
                         },
                         "digest": {
@@ -1013,15 +1074,26 @@
                 {
                     "title": "sha384",
                     "properties": {
-                        "hashAlg": { 
+                        "hashAlg": {
                             "type": "string",
                             "enum": [
-                                "sha384"
+                                "sha384","SHA384"
                             ]
                         },
                         "digest": {
                             "title": "digest",
                             "$ref": "#/definitions/TPM2B_GENERIC"
+                        }
+                    }
+                },
+                {
+                    "title": "null",
+                    "properties": {
+                        "hashAlg": {
+                            "type": "string",
+                            "enum": [
+                                "null","NULL"
+                            ]
                         }
                     }
                 }
@@ -1049,7 +1121,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "PCR"
+                        "PCR","PolicyPCR","POLICYPCR"
                     ],
                     "default": "PCR"
                 },
@@ -1093,7 +1165,7 @@
             "properties": {
                 "type": {
                     "enum": [
-                        "or"
+                        "PolicyOR", "or","OR"
                     ]
                 },
                 "branches": {
@@ -1203,7 +1275,7 @@
                 "anyOf": [
                     {
                         "title": "PhysicalPresence",
-                        "description": "Policy type PhysicalPresence",
+                        "description": "This policy element requires the TPM to check for physical presence. ",
                         "type": "object",
                         "required": [
                             "type"
@@ -1212,7 +1284,7 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
-                                    "PhysicalPresence"
+                                    "PhysicalPresence","PHYSICALPRESENCE","PolicyPhysicalPresence","POLICYPHYSICALPRESENCE"
                                 ],
                                 "default": "PhysicalPresence"
                             },
@@ -1225,7 +1297,7 @@
                     },
                     {
                         "title": "Signed",
-                        "description": "Policy type Signed",
+                        "description": "Include a signed authorization in a policy.",
                         "type": "object",
                         "required": [
                             "type"
@@ -1234,7 +1306,7 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
-                                    "Signed"
+                                    "Signed","SIGNED","PolicySigned","POLICYSIGNED"
                                 ],
                                 "default": "Signed"
                             },
@@ -1288,7 +1360,7 @@
                     },
                     {
                         "title": "Secret",
-                        "description": "Policy type Secret",
+                        "description": "Include a signed authorization in a policy. ",
                         "type": "object",
                         "required": [
                             "type"
@@ -1297,7 +1369,7 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
-                                    "Secret"
+                                    "Secret","SECRET","PolicySecret","POLICYSECRET"
                                 ],
                                 "default": "Secret"
                             },
@@ -1341,7 +1413,7 @@
                     },
                     {
                         "title": "Locality",
-                        "description": "Policy type Locality",
+                        "description": "Limit the authorization to a specific locality.",
                         "type": "object",
                         "required": [
                             "type",
@@ -1351,7 +1423,7 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
-                                    "Locality"
+                                    "Locality","LOCALITY","PolicyLocality","POLICYLOCALITY"
                                 ],
                                 "default": "Locality"
                             },
@@ -1369,7 +1441,7 @@
                     },
                     {
                         "title": "NV",
-                        "description": "Policy type NV",
+                        "description": "Bind a policy authorization to a condition for a certain NV index",
                         "type": "object",
                         "required": [
                             "type",
@@ -1379,7 +1451,7 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
-                                    "NV"
+                                    "NV","PolicyNV","POLICYNV"
                                 ],
                                 "default": "NV"
                             },
@@ -1423,7 +1495,7 @@
                     },
                     {
                         "title": "CounterTimer",
-                        "description": "Policy type CounterTimer",
+                        "description": "Conditional gating of a policy based on the contents of the TPMS_TIME_INFO structure.",
                         "type": "object",
                         "required": [
                             "type",
@@ -1434,7 +1506,7 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
-                                    "CounterTimer"
+                                    "CounterTimer","COUNTERTIMER","PolicyCounterTimer","POLICYCOUNTERTIMER"
                                 ],
                                 "default": "CounterTimer"
                             },
@@ -1463,7 +1535,7 @@
                     },
                     {
                         "title": "CommandCode",
-                        "description": "Policy type CommandCode",
+                        "description": "TPM Command Code to which this policy applies, e.g. NV_WRITE or NV_READ (without TPM2_CC_ prefix)",
                         "type": "object",
                         "required": [
                             "type",
@@ -1473,7 +1545,7 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
-                                    "CommandCode"
+                                    "CommandCode","COMMANDCODE","PolicyCommandCode","POLICYCOMMANDCODE"
                                 ],
                                 "default": "CommandCode"
                             },
@@ -1491,7 +1563,7 @@
                     },
                     {
                         "title": "CpHash",
-                        "description": "Policy type CpHash",
+                        "description": "Bind policy to a specific command and command parameters.",
                         "type": "object",
                         "required": [
                             "type",
@@ -1501,7 +1573,7 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
-                                    "CpHash"
+                                    "CpHash","CPHASH","PolicyCpHash","POLICYCPHASH"
                                 ],
                                 "default": "CpHash"
                             },
@@ -1519,7 +1591,7 @@
                     },
                     {
                         "title": "NameHash",
-                        "description": "Policy type NameHash",
+                        "description": "Bind a policy to a specific set of TPM entities ",
                         "type": "object",
                         "required": [
                             "type"
@@ -1528,7 +1600,7 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
-                                    "NameHash"
+                                    "NameHash","NAMEHASH","PolicyNameHash","POLICYNAMEHASH"
                                 ],
                                 "default": "NameHash"
                             },
@@ -1566,7 +1638,7 @@
                     },
                     {
                         "title": "DuplicationSelect",
-                        "description": "Policy type DuplicationSelect",
+                        "description": "Qualification of duplication to allow duplication to a selected new parent.",
                         "type": "object",
                         "required": [
                             "type"
@@ -1575,7 +1647,7 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
-                                    "DuplicationSelect"
+                                    "DuplicationSelect","DUPLICATIONSELECT","PolicyDuplicationSelect","POLICYDUPLICATIONSELECT"
                                 ],
                                 "default": "DuplicationSelect"
                             },
@@ -1608,7 +1680,7 @@
                     },
                     {
                         "title": "Authorize",
-                        "description": "Policy type Authorize",
+                        "description": "Provide change of policies.",
                         "type": "object",
                         "required": [
                             "type"
@@ -1617,7 +1689,7 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
-                                    "Authorize"
+                                    "Authorize","AUTHORIZE","PolicyAuthorize","POLICYAUTHORIZE"
                                 ],
                                 "default": "Authorize"
                             },
@@ -1660,7 +1732,7 @@
                     },
                     {
                         "title": "AuthValue",
-                        "description": "Policy type AuthValue",
+                        "description": "Bind policy to the authorization value of the authorized entity.",
                         "type": "object",
                         "required": [
                             "type"
@@ -1669,7 +1741,7 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
-                                    "AuthValue"
+                                    "AuthValue","AUTHVALUE","PolicyAuthValue","POLICYAUTHVALUE"
                                 ],
                                 "default": "AuthValue"
                             },
@@ -1682,7 +1754,7 @@
                     },
                     {
                         "title": "Password",
-                        "description": "Policy type Password",
+                        "description": "This policy element requires the auth value of the object to be included in the final HMAC calculation",
                         "type": "object",
                         "required": [
                             "type"
@@ -1691,7 +1763,7 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
-                                    "Password"
+                                    "Password","PASSWORD","PolicyPassword","POLICYPASSWORD"
                                 ],
                                 "default": "Password"
                             },
@@ -1704,7 +1776,7 @@
                     },
                     {
                         "title": "NvWritten",
-                        "description": "Policy type NvWritten",
+                        "description": "Bind policy to the written state of a NV index.",
                         "type": "object",
                         "required": [
                             "type"
@@ -1713,7 +1785,7 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
-                                    "NvWritten"
+                                    "NvWritten","NvWritten","PolicyNvWritten","POLICYNvWritten"
                                 ],
                                 "default": "NvWritten"
                             },
@@ -1731,7 +1803,7 @@
                     },
                     {
                         "title": "Template",
-                        "description": "Policy type Template",
+                        "description": "Bind policy to a specific creation template.",
                         "type": "object",
                         "required": [
                             "type"
@@ -1740,7 +1812,7 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
-                                    "Template"
+                                    "Template","TEMPLATE","PolicyTemplate","POLICYTEMPLATE"
                                 ],
                                 "default": "Template"
                             },
@@ -1758,7 +1830,7 @@
                     },
                     {
                         "title": "AuthorizeNV",
-                        "description": "Policy type AuthorizeNV",
+                        "description": "Store an approved policy in an NV index location",
                         "type": "object",
                         "required": [
                             "type"
@@ -1767,7 +1839,7 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
-                                    "AuthorizeNV"
+                                    "AuthorizeNV","AUTHORIZENV","PolicyAuthorizeNV","POLICYAUTHORIZENV"
                                 ],
                                 "default": "AuthorizeNV"
                             },
@@ -1785,7 +1857,7 @@
                     },
                     {
                         "title": "Action",
-                        "description": "Policy type Action",
+                        "description": "Policy element that is used as a placeholder for application actions.",
                         "type": "object",
                         "required": [
                             "type",
@@ -1795,7 +1867,7 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
-                                    "Action"
+                                    "Action","ACTION","PolicyAction","POLICYACTION"
                                 ],
                                 "default": "Action"
                             },
@@ -1813,7 +1885,7 @@
                     },
                     {
                         "title": "PCR",
-                        "description": "Policy type PCR",
+                        "description": "Perform Authentication against certain PCR Values",
                         "type": "object",
                         "required": [
                             "type"
@@ -1822,7 +1894,7 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
-                                    "PCR"
+                                    "PCR","PolicyPCR","POLICYPCR"
                                 ],
                                 "default": "PCR"
                             },
@@ -1855,7 +1927,7 @@
                         "properties": {
                             "type": {
                                 "enum": [
-                                    "or"
+                                    "PolicyOR", "or","OR"
                                 ]
                             },
                             "branches": {
@@ -1901,7 +1973,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "TPMS_POLICY"
+                        "TPMS_POLICY","PolicyTPMS_POLICY","POLICYTPMS_POLICY"
                     ],
                     "default": "TPMS_POLICY"
                 },
@@ -1939,10 +2011,15 @@
             "description": "",
             "enum": [
                 "TPM2_SPEC_FAMILY",
+                "tpm2_spec_family",
                 "TPM2_SPEC_LEVEL",
+                "tpm2_spec_level",
                 "TPM2_SPEC_VERSION",
+                "tpm2_spec_version",
                 "TPM2_SPEC_YEAR",
-                "TPM2_SPEC_DAY_OF_YEAR"
+                "tpm2_spec_year",
+                "TPM2_SPEC_DAY_OF_YEAR",
+                "tpm2_spec_day_of_year"
             ]
         },
         "TPM2_GENERATED": {
@@ -1951,7 +2028,8 @@
             "type": "string",
             "description": "",
             "enum": [
-                "TPM2_GENERATED_VALUE"
+                "TPM2_GENERATED_VALUE",
+                "tpm2_generated_value"
             ]
         },
         "TPM2_ALG_ID": {
@@ -1961,42 +2039,80 @@
             "description": "",
             "enum": [
                 "error",
+                "ERROR",
                 "rsa",
+                "RSA",
                 "sha",
+                "SHA",
                 "sha1",
+                "SHA1",
                 "hmac",
+                "HMAC",
                 "aes",
+                "AES",
                 "mgf1",
+                "MGF1",
                 "keyedhash",
+                "KEYEDHASH",
                 "xor",
+                "XOR",
                 "sha256",
+                "SHA256",
                 "sha384",
+                "SHA384",
                 "sha512",
+                "SHA512",
                 "null",
+                "NULL",
                 "sm3_256",
+                "SM3_256",
                 "sm4",
+                "SM4",
                 "rsaSSA",
+                "rsassa",
+                "RSASSA",
                 "rsaES",
+                "rsaes",
+                "RSAES",
                 "rsaPSS",
+                "rsapss",
+                "RSAPSS",
                 "oaep",
+                "OAEP",
                 "ecdsa",
+                "ECDSA",
                 "ecdh",
+                "ECDH",
                 "ecdaa",
+                "ECDAA",
                 "sm2",
+                "SM2",
                 "ecschnorr",
+                "ECSCHNORR",
                 "ecmqv",
+                "ECMQV",
                 "kdf1_sp800_56a",
+                "KDF1_SP800_56A",
                 "kdf2",
+                "KDF2",
                 "kdf1_sp800_108",
+                "KDF1_SP800_108",
                 "ecc",
+                "ECC",
                 "symcipher",
+                "SYMCIPHER",
                 "camellia",
+                "CAMELLIA",
                 "ctr",
+                "CTR",
                 "ofb",
+                "OFB",
                 "cbc",
+                "CBC",
                 "cfb",
+                "CFB",
                 "ecb",
-                "reserved"
+                "ECB"
             ]
         },
         "TPM2_ECC_CURVE": {
@@ -2006,14 +2122,23 @@
             "description": "",
             "enum": [
                 "NONE",
+                "none",
                 "nist_p192",
+                "NIST_P192",
                 "nist_p224",
+                "NIST_P224",
                 "nist_p256",
+                "NIST_P256",
                 "nist_p384",
+                "NIST_P384",
                 "nist_p521",
+                "NIST_P521",
                 "bn_p256",
+                "BN_P256",
                 "bn_p638",
-                "sm2_p256"
+                "BN_P638",
+                "sm2_p256",
+                "SM2_P256"
             ]
         },
         "TPM2_CC": {
@@ -2023,119 +2148,345 @@
             "description": "",
             "enum": [
                 "NV_UndefineSpaceSpecial",
+                "nv_undefinespacespecial",
+                "NV_UNDEFINESPACESPECIAL",
                 "EvictControl",
+                "evictcontrol",
+                "EVICTCONTROL",
                 "HierarchyControl",
+                "hierarchycontrol",
+                "HIERARCHYCONTROL",
                 "NV_UndefineSpace",
+                "nv_undefinespace",
+                "NV_UNDEFINESPACE",
                 "ChangeEPS",
+                "changeeps",
+                "CHANGEEPS",
                 "ChangePPS",
+                "changepps",
+                "CHANGEPPS",
                 "Clear",
+                "clear",
+                "CLEAR",
                 "ClearControl",
+                "clearcontrol",
+                "CLEARCONTROL",
                 "ClockSet",
+                "clockset",
+                "CLOCKSET",
                 "HierarchyChangeAuth",
+                "hierarchychangeauth",
+                "HIERARCHYCHANGEAUTH",
                 "NV_DefineSpace",
+                "nv_definespace",
+                "NV_DEFINESPACE",
                 "PCR_Allocate",
+                "pcr_allocate",
+                "PCR_ALLOCATE",
                 "PCR_SetAuthPolicy",
+                "pcr_setauthpolicy",
+                "PCR_SETAUTHPOLICY",
                 "PP_Commands",
+                "pp_commands",
+                "PP_COMMANDS",
                 "SetPrimaryPolicy",
+                "setprimarypolicy",
+                "SETPRIMARYPOLICY",
                 "FieldUpgradeStart",
+                "fieldupgradestart",
+                "FIELDUPGRADESTART",
                 "ClockRateAdjust",
+                "clockrateadjust",
+                "CLOCKRATEADJUST",
                 "CreatePrimary",
+                "createprimary",
+                "CREATEPRIMARY",
                 "NV_GlobalWriteLock",
+                "nv_globalwritelock",
+                "NV_GLOBALWRITELOCK",
                 "GetCommandAuditDigest",
+                "getcommandauditdigest",
+                "GETCOMMANDAUDITDIGEST",
                 "NV_Increment",
+                "nv_increment",
+                "NV_INCREMENT",
                 "NV_SetBits",
+                "nv_setbits",
+                "NV_SETBITS",
                 "NV_Extend",
+                "nv_extend",
+                "NV_EXTEND",
                 "NV_Write",
+                "nv_write",
+                "NV_WRITE",
                 "NV_WriteLock",
+                "nv_writelock",
+                "NV_WRITELOCK",
                 "DictionaryAttackLockReset",
+                "dictionaryattacklockreset",
+                "DICTIONARYATTACKLOCKRESET",
                 "DictionaryAttackParameters",
+                "dictionaryattackparameters",
+                "DICTIONARYATTACKPARAMETERS",
                 "NV_ChangeAuth",
+                "nv_changeauth",
+                "NV_CHANGEAUTH",
                 "PCR_Event",
+                "pcr_event",
+                "PCR_EVENT",
                 "PCR_Reset",
+                "pcr_reset",
+                "PCR_RESET",
                 "SequenceComplete",
+                "sequencecomplete",
+                "SEQUENCECOMPLETE",
                 "SetAlgorithmSet",
+                "setalgorithmset",
+                "SETALGORITHMSET",
                 "SetCommandCodeAuditStatus",
+                "setcommandcodeauditstatus",
+                "SETCOMMANDCODEAUDITSTATUS",
                 "FieldUpgradeData",
+                "fieldupgradedata",
+                "FIELDUPGRADEDATA",
                 "IncrementalSelfTest",
+                "incrementalselftest",
+                "INCREMENTALSELFTEST",
                 "SelfTest",
+                "selftest",
+                "SELFTEST",
                 "Startup",
+                "startup",
+                "STARTUP",
                 "Shutdown",
+                "shutdown",
+                "SHUTDOWN",
                 "StirRandom",
+                "stirrandom",
+                "STIRRANDOM",
                 "ActivateCredential",
+                "activatecredential",
+                "ACTIVATECREDENTIAL",
                 "Certify",
+                "certify",
+                "CERTIFY",
                 "PolicyNV",
+                "policynv",
+                "POLICYNV",
                 "CertifyCreation",
+                "certifycreation",
+                "CERTIFYCREATION",
                 "Duplicate",
+                "duplicate",
+                "DUPLICATE",
                 "GetTime",
+                "gettime",
+                "GETTIME",
                 "GetSessionAuditDigest",
+                "getsessionauditdigest",
+                "GETSESSIONAUDITDIGEST",
                 "NV_Read",
+                "nv_read",
+                "NV_READ",
                 "NV_ReadLock",
+                "nv_readlock",
+                "NV_READLOCK",
                 "ObjectChangeAuth",
+                "objectchangeauth",
+                "OBJECTCHANGEAUTH",
                 "PolicySecret",
+                "policysecret",
+                "POLICYSECRET",
                 "Rewrap",
+                "rewrap",
+                "REWRAP",
                 "Create",
+                "create",
+                "CREATE",
                 "ECDH_ZGen",
+                "ecdh_zgen",
+                "ECDH_ZGEN",
                 "HMAC",
+                "hmac",
                 "Import",
+                "import",
+                "IMPORT",
                 "Load",
+                "load",
+                "LOAD",
                 "Quote",
+                "quote",
+                "QUOTE",
                 "RSA_Decrypt",
+                "rsa_decrypt",
+                "RSA_DECRYPT",
                 "HMAC_Start",
+                "hmac_start",
+                "HMAC_START",
                 "SequenceUpdate",
+                "sequenceupdate",
+                "SEQUENCEUPDATE",
                 "Sign",
+                "sign",
+                "SIGN",
                 "Unseal",
+                "unseal",
+                "UNSEAL",
                 "PolicySigned",
+                "policysigned",
+                "POLICYSIGNED",
                 "ContextLoad",
+                "contextload",
+                "CONTEXTLOAD",
                 "ContextSave",
+                "contextsave",
+                "CONTEXTSAVE",
                 "ECDH_KeyGen",
+                "ecdh_keygen",
+                "ECDH_KEYGEN",
                 "EncryptDecrypt",
+                "encryptdecrypt",
+                "ENCRYPTDECRYPT",
                 "FlushContext",
+                "flushcontext",
+                "FLUSHCONTEXT",
                 "LoadExternal",
+                "loadexternal",
+                "LOADEXTERNAL",
                 "MakeCredential",
+                "makecredential",
+                "MAKECREDENTIAL",
                 "NV_ReadPublic",
+                "nv_readpublic",
+                "NV_READPUBLIC",
                 "PolicyAuthorize",
+                "policyauthorize",
+                "POLICYAUTHORIZE",
                 "PolicyAuthValue",
+                "policyauthvalue",
+                "POLICYAUTHVALUE",
                 "PolicyCommandCode",
+                "policycommandcode",
+                "POLICYCOMMANDCODE",
                 "PolicyCounterTimer",
+                "policycountertimer",
+                "POLICYCOUNTERTIMER",
                 "PolicyCpHash",
+                "policycphash",
+                "POLICYCPHASH",
                 "PolicyLocality",
+                "policylocality",
+                "POLICYLOCALITY",
                 "PolicyNameHash",
+                "policynamehash",
+                "POLICYNAMEHASH",
                 "PolicyOR",
+                "policyor",
+                "POLICYOR",
                 "PolicyTicket",
+                "policyticket",
+                "POLICYTICKET",
                 "ReadPublic",
+                "readpublic",
+                "READPUBLIC",
                 "RSA_Encrypt",
+                "rsa_encrypt",
+                "RSA_ENCRYPT",
                 "StartAuthSession",
+                "startauthsession",
+                "STARTAUTHSESSION",
                 "VerifySignature",
+                "verifysignature",
+                "VERIFYSIGNATURE",
                 "ECC_Parameters",
+                "ecc_parameters",
+                "ECC_PARAMETERS",
                 "FirmwareRead",
+                "firmwareread",
+                "FIRMWAREREAD",
                 "GetCapability",
+                "getcapability",
+                "GETCAPABILITY",
                 "GetRandom",
+                "getrandom",
+                "GETRANDOM",
                 "GetTestResult",
+                "gettestresult",
+                "GETTESTRESULT",
                 "Hash",
+                "hash",
+                "HASH",
                 "PCR_Read",
+                "pcr_read",
+                "PCR_READ",
                 "PolicyPCR",
+                "policypcr",
+                "POLICYPCR",
                 "PolicyRestart",
+                "policyrestart",
+                "POLICYRESTART",
                 "ReadClock",
+                "readclock",
+                "READCLOCK",
                 "PCR_Extend",
+                "pcr_extend",
+                "PCR_EXTEND",
                 "PCR_SetAuthValue",
+                "pcr_setauthvalue",
+                "PCR_SETAUTHVALUE",
                 "NV_Certify",
+                "nv_certify",
+                "NV_CERTIFY",
                 "EventSequenceComplete",
+                "eventsequencecomplete",
+                "EVENTSEQUENCECOMPLETE",
                 "HashSequenceStart",
+                "hashsequencestart",
+                "HASHSEQUENCESTART",
                 "PolicyPhysicalPresence",
+                "policyphysicalpresence",
+                "POLICYPHYSICALPRESENCE",
                 "PolicyDuplicationSelect",
+                "policyduplicationselect",
+                "POLICYDUPLICATIONSELECT",
                 "PolicyGetDigest",
+                "policygetdigest",
+                "POLICYGETDIGEST",
                 "TestParms",
+                "testparms",
+                "TESTPARMS",
                 "Commit",
+                "commit",
+                "COMMIT",
                 "PolicyPassword",
+                "policypassword",
+                "POLICYPASSWORD",
                 "ZGen_2Phase",
+                "zgen_2phase",
+                "ZGEN_2PHASE",
                 "EC_Ephemeral",
+                "ec_ephemeral",
+                "EC_EPHEMERAL",
                 "PolicyNvWritten",
+                "policynvwritten",
+                "POLICYNvWritten",
                 "PolicyTemplate",
+                "policytemplate",
+                "POLICYTEMPLATE",
                 "CreateLoaded",
+                "createloaded",
+                "CREATELOADED",
                 "PolicyAuthorizeNV",
+                "policyauthorizenv",
+                "POLICYAUTHORIZENV",
                 "EncryptDecrypt2",
+                "encryptdecrypt2",
+                "ENCRYPTDECRYPT2",
                 "TPM2_CC_VEND",
-                "Vendor_TCG_Test"
+                "tpm2_cc_vend",
+                "Vendor_TCG_Test",
+                "vendor_tcg_test",
+                "VENDOR_TCG_TEST"
             ]
         },
         "TPM2_RC": {
@@ -2145,126 +2496,245 @@
             "description": "",
             "enum": [
                 "TPM2_RC_SUCCESS",
+                "tpm2_rc_success",
                 "TPM2_RC_BAD_TAG",
+                "tpm2_rc_bad_tag",
                 "TPM2_RC_VER1",
+                "tpm2_rc_ver1",
                 "TPM2_RC_INITIALIZE",
+                "tpm2_rc_initialize",
                 "TPM2_RC_FAILURE",
+                "tpm2_rc_failure",
                 "TPM2_RC_SEQUENCE",
+                "tpm2_rc_sequence",
                 "TPM2_RC_PRIVATE",
+                "tpm2_rc_private",
                 "TPM2_RC_HMAC",
+                "tpm2_rc_hmac",
                 "TPM2_RC_DISABLED",
+                "tpm2_rc_disabled",
                 "TPM2_RC_EXCLUSIVE",
+                "tpm2_rc_exclusive",
                 "TPM2_RC_AUTH_TYPE",
+                "tpm2_rc_auth_type",
                 "TPM2_RC_AUTH_MISSING",
+                "tpm2_rc_auth_missing",
                 "TPM2_RC_POLICY",
+                "tpm2_rc_policy",
                 "TPM2_RC_PCR",
+                "tpm2_rc_pcr",
                 "TPM2_RC_PCR_CHANGED",
+                "tpm2_rc_pcr_changed",
                 "TPM2_RC_UPGRADE",
+                "tpm2_rc_upgrade",
                 "TPM2_RC_TOO_MANY_CONTEXTS",
+                "tpm2_rc_too_many_contexts",
                 "TPM2_RC_AUTH_UNAVAILABLE",
+                "tpm2_rc_auth_unavailable",
                 "TPM2_RC_REBOOT",
+                "tpm2_rc_reboot",
                 "TPM2_RC_UNBALANCED",
+                "tpm2_rc_unbalanced",
                 "TPM2_RC_COMMAND_SIZE",
+                "tpm2_rc_command_size",
                 "TPM2_RC_COMMAND_CODE",
+                "tpm2_rc_command_code",
                 "TPM2_RC_AUTHSIZE",
+                "tpm2_rc_authsize",
                 "TPM2_RC_AUTH_CONTEXT",
+                "tpm2_rc_auth_context",
                 "TPM2_RC_NV_RANGE",
+                "tpm2_rc_nv_range",
                 "TPM2_RC_NV_SIZE",
+                "tpm2_rc_nv_size",
                 "TPM2_RC_NV_LOCKED",
+                "tpm2_rc_nv_locked",
                 "TPM2_RC_NV_AUTHORIZATION",
+                "tpm2_rc_nv_authorization",
                 "TPM2_RC_NV_UNINITIALIZED",
+                "tpm2_rc_nv_uninitialized",
                 "TPM2_RC_NV_SPACE",
+                "tpm2_rc_nv_space",
                 "TPM2_RC_NV_DEFINED",
+                "tpm2_rc_nv_defined",
                 "TPM2_RC_BAD_CONTEXT",
+                "tpm2_rc_bad_context",
                 "TPM2_RC_CPHASH",
+                "tpm2_rc_cphash",
                 "TPM2_RC_PARENT",
+                "tpm2_rc_parent",
                 "TPM2_RC_NEEDS_TEST",
+                "tpm2_rc_needs_test",
                 "TPM2_RC_NO_RESULT",
+                "tpm2_rc_no_result",
                 "TPM2_RC_SENSITIVE",
+                "tpm2_rc_sensitive",
                 "TPM2_RC_MAX_FM0",
+                "tpm2_rc_max_fm0",
                 "TPM2_RC_FMT1",
+                "tpm2_rc_fmt1",
                 "TPM2_RC_ASYMMETRIC",
+                "tpm2_rc_asymmetric",
                 "TPM2_RC_ATTRIBUTES",
+                "tpm2_rc_attributes",
                 "TPM2_RC_HASH",
+                "tpm2_rc_hash",
                 "TPM2_RC_VALUE",
+                "tpm2_rc_value",
                 "TPM2_RC_HIERARCHY",
+                "tpm2_rc_hierarchy",
                 "TPM2_RC_KEY_SIZE",
+                "tpm2_rc_key_size",
                 "TPM2_RC_MGF",
+                "tpm2_rc_mgf",
                 "TPM2_RC_MODE",
+                "tpm2_rc_mode",
                 "TPM2_RC_TYPE",
+                "tpm2_rc_type",
                 "TPM2_RC_HANDLE",
+                "tpm2_rc_handle",
                 "TPM2_RC_KDF",
+                "tpm2_rc_kdf",
                 "TPM2_RC_RANGE",
+                "tpm2_rc_range",
                 "TPM2_RC_AUTH_FAIL",
+                "tpm2_rc_auth_fail",
                 "TPM2_RC_NONCE",
+                "tpm2_rc_nonce",
                 "TPM2_RC_PP",
+                "tpm2_rc_pp",
                 "TPM2_RC_SCHEME",
+                "tpm2_rc_scheme",
                 "TPM2_RC_SIZE",
+                "tpm2_rc_size",
                 "TPM2_RC_SYMMETRIC",
+                "tpm2_rc_symmetric",
                 "TPM2_RC_TAG",
+                "tpm2_rc_tag",
                 "TPM2_RC_SELECTOR",
+                "tpm2_rc_selector",
                 "TPM2_RC_INSUFFICIENT",
+                "tpm2_rc_insufficient",
                 "TPM2_RC_SIGNATURE",
+                "tpm2_rc_signature",
                 "TPM2_RC_KEY",
+                "tpm2_rc_key",
                 "TPM2_RC_POLICY_FAIL",
+                "tpm2_rc_policy_fail",
                 "TPM2_RC_INTEGRITY",
+                "tpm2_rc_integrity",
                 "TPM2_RC_TICKET",
-                "TPM2_RC_RESERVED_BITS",
+                "tpm2_rc_ticket",
                 "TPM2_RC_BAD_AUTH",
+                "tpm2_rc_bad_auth",
                 "TPM2_RC_EXPIRED",
+                "tpm2_rc_expired",
                 "TPM2_RC_POLICY_CC",
+                "tpm2_rc_policy_cc",
                 "TPM2_RC_BINDING",
+                "tpm2_rc_binding",
                 "TPM2_RC_CURVE",
+                "tpm2_rc_curve",
                 "TPM2_RC_ECC_POINT",
+                "tpm2_rc_ecc_point",
                 "TPM2_RC_WARN",
+                "tpm2_rc_warn",
                 "TPM2_RC_CONTEXT_GAP",
+                "tpm2_rc_context_gap",
                 "TPM2_RC_OBJECT_MEMORY",
+                "tpm2_rc_object_memory",
                 "TPM2_RC_SESSION_MEMORY",
+                "tpm2_rc_session_memory",
                 "TPM2_RC_MEMORY",
+                "tpm2_rc_memory",
                 "TPM2_RC_SESSION_HANDLES",
+                "tpm2_rc_session_handles",
                 "TPM2_RC_OBJECT_HANDLES",
+                "tpm2_rc_object_handles",
                 "TPM2_RC_LOCALITY",
+                "tpm2_rc_locality",
                 "TPM2_RC_YIELDED",
+                "tpm2_rc_yielded",
                 "TPM2_RC_CANCELED",
+                "tpm2_rc_canceled",
                 "TPM2_RC_TESTING",
+                "tpm2_rc_testing",
                 "TPM2_RC_REFERENCE_H0",
+                "tpm2_rc_reference_h0",
                 "TPM2_RC_REFERENCE_H1",
+                "tpm2_rc_reference_h1",
                 "TPM2_RC_REFERENCE_H2",
+                "tpm2_rc_reference_h2",
                 "TPM2_RC_REFERENCE_H3",
+                "tpm2_rc_reference_h3",
                 "TPM2_RC_REFERENCE_H4",
+                "tpm2_rc_reference_h4",
                 "TPM2_RC_REFERENCE_H5",
+                "tpm2_rc_reference_h5",
                 "TPM2_RC_REFERENCE_H6",
+                "tpm2_rc_reference_h6",
                 "TPM2_RC_REFERENCE_S0",
+                "tpm2_rc_reference_s0",
                 "TPM2_RC_REFERENCE_S1",
+                "tpm2_rc_reference_s1",
                 "TPM2_RC_REFERENCE_S2",
+                "tpm2_rc_reference_s2",
                 "TPM2_RC_REFERENCE_S3",
+                "tpm2_rc_reference_s3",
                 "TPM2_RC_REFERENCE_S4",
+                "tpm2_rc_reference_s4",
                 "TPM2_RC_REFERENCE_S5",
+                "tpm2_rc_reference_s5",
                 "TPM2_RC_REFERENCE_S6",
+                "tpm2_rc_reference_s6",
                 "TPM2_RC_NV_RATE",
+                "tpm2_rc_nv_rate",
                 "TPM2_RC_LOCKOUT",
+                "tpm2_rc_lockout",
                 "TPM2_RC_RETRY",
+                "tpm2_rc_retry",
                 "TPM2_RC_NV_UNAVAILABLE",
+                "tpm2_rc_nv_unavailable",
                 "TPM2_RC_NOT_USED",
+                "tpm2_rc_not_used",
                 "TPM2_RC_H",
+                "tpm2_rc_h",
                 "TPM2_RC_P",
+                "tpm2_rc_p",
                 "TPM2_RC_S",
+                "tpm2_rc_s",
                 "TPM2_RC_1",
+                "tpm2_rc_1",
                 "TPM2_RC_2",
+                "tpm2_rc_2",
                 "TPM2_RC_3",
+                "tpm2_rc_3",
                 "TPM2_RC_4",
+                "tpm2_rc_4",
                 "TPM2_RC_5",
+                "tpm2_rc_5",
                 "TPM2_RC_6",
+                "tpm2_rc_6",
                 "TPM2_RC_7",
+                "tpm2_rc_7",
                 "TPM2_RC_8",
+                "tpm2_rc_8",
                 "TPM2_RC_9",
+                "tpm2_rc_9",
                 "TPM2_RC_A",
+                "tpm2_rc_a",
                 "TPM2_RC_B",
+                "tpm2_rc_b",
                 "TPM2_RC_C",
+                "tpm2_rc_c",
                 "TPM2_RC_D",
+                "tpm2_rc_d",
                 "TPM2_RC_E",
+                "tpm2_rc_e",
                 "TPM2_RC_F",
-                "TPM2_RC_N_MASK"
+                "tpm2_rc_f",
+                "TPM2_RC_N_MASK",
+                "tpm2_rc_n_mask"
             ]
         },
         "TPM2_CLOCK_ADJUST": {
@@ -2274,12 +2744,19 @@
             "description": "",
             "enum": [
                 "TPM2_CLOCK_COARSE_SLOWER",
+                "tpm2_clock_coarse_slower",
                 "TPM2_CLOCK_MEDIUM_SLOWER",
+                "tpm2_clock_medium_slower",
                 "TPM2_CLOCK_FINE_SLOWER",
+                "tpm2_clock_fine_slower",
                 "TPM2_CLOCK_NO_CHANGE",
+                "tpm2_clock_no_change",
                 "TPM2_CLOCK_FINE_FASTER",
+                "tpm2_clock_fine_faster",
                 "TPM2_CLOCK_MEDIUM_FASTER",
-                "TPM2_CLOCK_COARSE_FASTER"
+                "tpm2_clock_medium_faster",
+                "TPM2_CLOCK_COARSE_FASTER",
+                "tpm2_clock_coarse_faster"
             ]
         },
         "TPM2_EO": {
@@ -2289,17 +2766,29 @@
             "description": "",
             "enum": [
                 "eq",
+                "EQ",
                 "neq",
+                "NEQ",
                 "signed_gt",
+                "SIGNED_GT",
                 "unsigned_gt",
+                "UNSIGNED_GT",
                 "signed_lt",
+                "SIGNED_LT",
                 "unsigned_lt",
+                "UNSIGNED_LT",
                 "signed_ge",
+                "SIGNED_GE",
                 "unsigned_ge",
+                "UNSIGNED_GE",
                 "signed_le",
+                "SIGNED_LE",
                 "unsigned_le",
+                "UNSIGNED_LE",
                 "bitset",
-                "bitclear"
+                "BITSET",
+                "bitclear",
+                "BITCLEAR"
             ]
         },
         "TPM2_ST": {
@@ -2309,23 +2798,39 @@
             "description": "",
             "enum": [
                 "TPM2_ST_RSP_COMMAND",
+                "tpm2_st_rsp_command",
                 "TPM2_ST_NULL",
+                "tpm2_st_null",
                 "TPM2_ST_NO_SESSIONS",
+                "tpm2_st_no_sessions",
                 "TPM2_ST_SESSIONS",
-                "reserved",
+                "tpm2_st_sessions",
                 "TPM2_ST_ATTEST_NV",
+                "tpm2_st_attest_nv",
                 "TPM2_ST_ATTEST_COMMAND_AUDIT",
+                "tpm2_st_attest_command_audit",
                 "TPM2_ST_ATTEST_SESSION_AUDIT",
+                "tpm2_st_attest_session_audit",
                 "TPM2_ST_ATTEST_CERTIFY",
+                "tpm2_st_attest_certify",
                 "TPM2_ST_ATTEST_QUOTE",
+                "tpm2_st_attest_quote",
                 "TPM2_ST_ATTEST_TIME",
+                "tpm2_st_attest_time",
                 "TPM2_ST_ATTEST_CREATION",
+                "tpm2_st_attest_creation",
                 "TPM2_ST_CREATION",
+                "tpm2_st_creation",
                 "TPM2_ST_VERIFIED",
+                "tpm2_st_verified",
                 "TPM2_ST_AUTH_SECRET",
+                "tpm2_st_auth_secret",
                 "TPM2_ST_HASHCHECK",
+                "tpm2_st_hashcheck",
                 "TPM2_ST_AUTH_SIGNED",
-                "TPM2_ST_FU_MANIFEST"
+                "tpm2_st_auth_signed",
+                "TPM2_ST_FU_MANIFEST",
+                "tpm2_st_fu_manifest"
             ]
         },
         "TPM2_SU": {
@@ -2335,7 +2840,9 @@
             "description": "",
             "enum": [
                 "TPM2_SU_CLEAR",
-                "TPM2_SU_STATE"
+                "tpm2_su_clear",
+                "TPM2_SU_STATE",
+                "tpm2_su_state"
             ]
         },
         "TPM2_SE": {
@@ -2345,27 +2852,41 @@
             "description": "",
             "enum": [
                 "TPM2_SE_HMAC",
+                "tpm2_se_hmac",
                 "TPM2_SE_POLICY",
-                "TPM2_SE_TRIAL"
+                "tpm2_se_policy",
+                "TPM2_SE_TRIAL",
+                "tpm2_se_trial"
             ]
         },
         "TPM2_CAP": {
             "title": "TPM2_CAP",
-            "default": "TPM2_CAP_ALGS",
+            "default": "ALGS",
             "type": "string",
             "description": "",
             "enum": [
-                "TPM2_CAP_ALGS",
-                "TPM2_CAP_HANDLES",
-                "TPM2_CAP_COMMANDS",
-                "TPM2_CAP_PP_COMMANDS",
-                "TPM2_CAP_AUDIT_COMMANDS",
-                "TPM2_CAP_PCRS",
-                "TPM2_CAP_TPM_PROPERTIES",
-                "TPM2_CAP_PCR_PROPERTIES",
-                "TPM2_CAP_ECC_CURVES",
-                "TPM2_CAP_AUTH_POLICIES",
-                "TPM2_CAP_VENDOR_PROPERTY"
+                "ALGS",
+                "algs",
+                "HANDLES",
+                "handles",
+                "COMMANDS",
+                "commands",
+                "PP_COMMANDS",
+                "pp_commands",
+                "AUDIT_COMMANDS",
+                "audit_commands",
+                "PCRS",
+                "pcrs",
+                "TPM_PROPERTIES",
+                "tpm_properties",
+                "PCR_PROPERTIES",
+                "pcr_properties",
+                "ECC_CURVES",
+                "ecc_curves",
+                "AUTH_POLICIES",
+                "auth_policies",
+                "VENDOR_PROPERTY",
+                "vendor_property"
             ]
         },
         "TPM2_PT": {
@@ -2375,76 +2896,147 @@
             "description": "",
             "enum": [
                 "TPM2_PT_NONE",
+                "tpm2_pt_none",
                 "TPM2_PT_GROUP",
+                "tpm2_pt_group",
                 "TPM2_PT_FIXED",
+                "tpm2_pt_fixed",
                 "TPM2_PT_FAMILY_INDICATOR",
+                "tpm2_pt_family_indicator",
                 "TPM2_PT_LEVEL",
+                "tpm2_pt_level",
                 "TPM2_PT_REVISION",
+                "tpm2_pt_revision",
                 "TPM2_PT_DAY_OF_YEAR",
+                "tpm2_pt_day_of_year",
                 "TPM2_PT_YEAR",
+                "tpm2_pt_year",
                 "TPM2_PT_MANUFACTURER",
+                "tpm2_pt_manufacturer",
                 "TPM2_PT_VENDOR_STRING_1",
+                "tpm2_pt_vendor_string_1",
                 "TPM2_PT_VENDOR_STRING_2",
+                "tpm2_pt_vendor_string_2",
                 "TPM2_PT_VENDOR_STRING_3",
+                "tpm2_pt_vendor_string_3",
                 "TPM2_PT_VENDOR_STRING_4",
+                "tpm2_pt_vendor_string_4",
                 "TPM2_PT_VENDOR_TPM_TYPE",
+                "tpm2_pt_vendor_tpm_type",
                 "TPM2_PT_FIRMWARE_VERSION_1",
+                "tpm2_pt_firmware_version_1",
                 "TPM2_PT_FIRMWARE_VERSION_2",
+                "tpm2_pt_firmware_version_2",
                 "TPM2_PT_INPUT_BUFFER",
+                "tpm2_pt_input_buffer",
                 "TPM2_PT_HR_TRANSIENT_MIN",
+                "tpm2_pt_hr_transient_min",
                 "TPM2_PT_HR_PERSISTENT_MIN",
+                "tpm2_pt_hr_persistent_min",
                 "TPM2_PT_HR_LOADED_MIN",
+                "tpm2_pt_hr_loaded_min",
                 "TPM2_PT_ACTIVE_SESSIONS_MAX",
+                "tpm2_pt_active_sessions_max",
                 "TPM2_PT_PCR_COUNT",
+                "tpm2_pt_pcr_count",
                 "TPM2_PT_PCR_SELECT_MIN",
+                "tpm2_pt_pcr_select_min",
                 "TPM2_PT_CONTEXT_GAP_MAX",
+                "tpm2_pt_context_gap_max",
                 "TPM2_PT_NV_COUNTERS_MAX",
+                "tpm2_pt_nv_counters_max",
                 "TPM2_PT_NV_INDEX_MAX",
+                "tpm2_pt_nv_index_max",
                 "TPM2_PT_MEMORY",
+                "tpm2_pt_memory",
                 "TPM2_PT_CLOCK_UPDATE",
+                "tpm2_pt_clock_update",
                 "TPM2_PT_CONTEXT_HASH",
+                "tpm2_pt_context_hash",
                 "TPM2_PT_CONTEXT_SYM",
+                "tpm2_pt_context_sym",
                 "TPM2_PT_CONTEXT_SYM_SIZE",
+                "tpm2_pt_context_sym_size",
                 "TPM2_PT_ORDERLY_COUNT",
+                "tpm2_pt_orderly_count",
                 "TPM2_PT_MAX_COMMAND_SIZE",
+                "tpm2_pt_max_command_size",
                 "TPM2_PT_MAX_RESPONSE_SIZE",
+                "tpm2_pt_max_response_size",
                 "TPM2_PT_MAX_DIGEST",
+                "tpm2_pt_max_digest",
                 "TPM2_PT_MAX_OBJECT_CONTEXT",
+                "tpm2_pt_max_object_context",
                 "TPM2_PT_MAX_SESSION_CONTEXT",
+                "tpm2_pt_max_session_context",
                 "TPM2_PT_PS_FAMILY_INDICATOR",
+                "tpm2_pt_ps_family_indicator",
                 "TPM2_PT_PS_LEVEL",
+                "tpm2_pt_ps_level",
                 "TPM2_PT_PS_REVISION",
+                "tpm2_pt_ps_revision",
                 "TPM2_PT_PS_DAY_OF_YEAR",
+                "tpm2_pt_ps_day_of_year",
                 "TPM2_PT_PS_YEAR",
+                "tpm2_pt_ps_year",
                 "TPM2_PT_SPLIT_MAX",
+                "tpm2_pt_split_max",
                 "TPM2_PT_TOTAL_COMMANDS",
+                "tpm2_pt_total_commands",
                 "TPM2_PT_LIBRARY_COMMANDS",
+                "tpm2_pt_library_commands",
                 "TPM2_PT_VENDOR_COMMANDS",
+                "tpm2_pt_vendor_commands",
                 "TPM2_PT_NV_BUFFER_MAX",
+                "tpm2_pt_nv_buffer_max",
                 "TPM2_PT_MODES",
+                "tpm2_pt_modes",
                 "TPM2_PT_MAX_CAP_BUFFER",
+                "tpm2_pt_max_cap_buffer",
                 "TPM2_PT_VAR",
+                "tpm2_pt_var",
                 "TPM2_PT_PERMANENT",
+                "tpm2_pt_permanent",
                 "TPM2_PT_STARTUP_CLEAR",
+                "tpm2_pt_startup_clear",
                 "TPM2_PT_HR_NV_INDEX",
+                "tpm2_pt_hr_nv_index",
                 "TPM2_PT_HR_LOADED",
+                "tpm2_pt_hr_loaded",
                 "TPM2_PT_HR_LOADED_AVAIL",
+                "tpm2_pt_hr_loaded_avail",
                 "TPM2_PT_HR_ACTIVE",
+                "tpm2_pt_hr_active",
                 "TPM2_PT_HR_ACTIVE_AVAIL",
+                "tpm2_pt_hr_active_avail",
                 "TPM2_PT_HR_TRANSIENT_AVAIL",
+                "tpm2_pt_hr_transient_avail",
                 "TPM2_PT_HR_PERSISTENT",
+                "tpm2_pt_hr_persistent",
                 "TPM2_PT_HR_PERSISTENT_AVAIL",
+                "tpm2_pt_hr_persistent_avail",
                 "TPM2_PT_NV_COUNTERS",
+                "tpm2_pt_nv_counters",
                 "TPM2_PT_NV_COUNTERS_AVAIL",
+                "tpm2_pt_nv_counters_avail",
                 "TPM2_PT_ALGORITHM_SET",
+                "tpm2_pt_algorithm_set",
                 "TPM2_PT_LOADED_CURVES",
+                "tpm2_pt_loaded_curves",
                 "TPM2_PT_LOCKOUT_COUNTER",
+                "tpm2_pt_lockout_counter",
                 "TPM2_PT_MAX_AUTH_FAIL",
+                "tpm2_pt_max_auth_fail",
                 "TPM2_PT_LOCKOUT_INTERVAL",
+                "tpm2_pt_lockout_interval",
                 "TPM2_PT_LOCKOUT_RECOVERY",
+                "tpm2_pt_lockout_recovery",
                 "TPM2_PT_NV_WRITE_RECOVERY",
+                "tpm2_pt_nv_write_recovery",
                 "TPM2_PT_AUDIT_COUNTER_0",
-                "TPM2_PT_AUDIT_COUNTER_1"
+                "tpm2_pt_audit_counter_0",
+                "TPM2_PT_AUDIT_COUNTER_1",
+                "tpm2_pt_audit_counter_1"
             ]
         },
         "TPM2_PT_PCR": {
@@ -2454,21 +3046,35 @@
             "description": "",
             "enum": [
                 "TPM2_PT_PCR_SAVE",
+                "tpm2_pt_pcr_save",
                 "TPM2_PT_PCR_EXTEND_L0",
+                "tpm2_pt_pcr_extend_l0",
                 "TPM2_PT_PCR_RESET_L0",
+                "tpm2_pt_pcr_reset_l0",
                 "TPM2_PT_PCR_EXTEND_L1",
+                "tpm2_pt_pcr_extend_l1",
                 "TPM2_PT_PCR_RESET_L1",
+                "tpm2_pt_pcr_reset_l1",
                 "TPM2_PT_PCR_EXTEND_L2",
+                "tpm2_pt_pcr_extend_l2",
                 "TPM2_PT_PCR_RESET_L2",
+                "tpm2_pt_pcr_reset_l2",
                 "TPM2_PT_PCR_EXTEND_L3",
+                "tpm2_pt_pcr_extend_l3",
                 "TPM2_PT_PCR_RESET_L3",
+                "tpm2_pt_pcr_reset_l3",
                 "TPM2_PT_PCR_EXTEND_L4",
+                "tpm2_pt_pcr_extend_l4",
                 "TPM2_PT_PCR_RESET_L4",
-                "reserved",
+                "tpm2_pt_pcr_reset_l4",
                 "TPM2_PT_PCR_NO_INCREMENT",
+                "tpm2_pt_pcr_no_increment",
                 "TPM2_PT_PCR_DRTM_RESET",
+                "tpm2_pt_pcr_drtm_reset",
                 "TPM2_PT_PCR_POLICY",
-                "TPM2_PT_PCR_AUTH"
+                "tpm2_pt_pcr_policy",
+                "TPM2_PT_PCR_AUTH",
+                "tpm2_pt_pcr_auth"
             ]
         },
         "TPM2_PS": {
@@ -2478,21 +3084,37 @@
             "description": "",
             "enum": [
                 "TPM2_PS_MAIN",
+                "tpm2_ps_main",
                 "TPM2_PS_PC",
+                "tpm2_ps_pc",
                 "TPM2_PS_PDA",
+                "tpm2_ps_pda",
                 "TPM2_PS_CELL_PHONE",
+                "tpm2_ps_cell_phone",
                 "TPM2_PS_SERVER",
+                "tpm2_ps_server",
                 "TPM2_PS_PERIPHERAL",
+                "tpm2_ps_peripheral",
                 "TPM2_PS_TSS",
+                "tpm2_ps_tss",
                 "TPM2_PS_STORAGE",
+                "tpm2_ps_storage",
                 "TPM2_PS_AUTHENTICATION",
+                "tpm2_ps_authentication",
                 "TPM2_PS_EMBEDDED",
+                "tpm2_ps_embedded",
                 "TPM2_PS_HARDCOPY",
+                "tpm2_ps_hardcopy",
                 "TPM2_PS_INFRASTRUCTURE",
+                "tpm2_ps_infrastructure",
                 "TPM2_PS_VIRTUALIZATION",
+                "tpm2_ps_virtualization",
                 "TPM2_PS_TNC",
+                "tpm2_ps_tnc",
                 "TPM2_PS_MULTI_TENANT",
-                "TPM2_PS_TC"
+                "tpm2_ps_multi_tenant",
+                "TPM2_PS_TC",
+                "tpm2_ps_tc"
             ]
         },
         "TPM2_HT": {
@@ -2502,14 +3124,23 @@
             "description": "",
             "enum": [
                 "TPM2_HT_PCR",
+                "tpm2_ht_pcr",
                 "TPM2_HT_NV_INDEX",
+                "tpm2_ht_nv_index",
                 "TPM2_HT_HMAC_SESSION",
+                "tpm2_ht_hmac_session",
                 "TPM2_HT_LOADED_SESSION",
+                "tpm2_ht_loaded_session",
                 "TPM2_HT_POLICY_SESSION",
+                "tpm2_ht_policy_session",
                 "TPM2_HT_SAVED_SESSION",
+                "tpm2_ht_saved_session",
                 "TPM2_HT_PERMANENT",
+                "tpm2_ht_permanent",
                 "TPM2_HT_TRANSIENT",
-                "TPM2_HT_PERSISTENT"
+                "tpm2_ht_transient",
+                "TPM2_HT_PERSISTENT",
+                "tpm2_ht_persistent"
             ]
         },
         "TPM2_RH": {
@@ -2519,21 +3150,37 @@
             "description": "",
             "enum": [
                 "TPM2_RH_SRK",
+                "tpm2_rh_srk",
                 "TPM2_RH_OWNER",
+                "tpm2_rh_owner",
                 "TPM2_RH_REVOKE",
+                "tpm2_rh_revoke",
                 "TPM2_RH_TRANSPORT",
+                "tpm2_rh_transport",
                 "TPM2_RH_OPERATOR",
+                "tpm2_rh_operator",
                 "TPM2_RH_ADMIN",
+                "tpm2_rh_admin",
                 "TPM2_RH_EK",
+                "tpm2_rh_ek",
                 "TPM2_RH_NULL",
+                "tpm2_rh_null",
                 "TPM2_RH_UNASSIGNED",
+                "tpm2_rh_unassigned",
                 "TPM2_RS_PW",
+                "tpm2_rs_pw",
                 "TPM2_RH_LOCKOUT",
+                "tpm2_rh_lockout",
                 "TPM2_RH_ENDORSEMENT",
+                "tpm2_rh_endorsement",
                 "TPM2_RH_PLATFORM",
+                "tpm2_rh_platform",
                 "TPM2_RH_PLATFORM_NV",
+                "tpm2_rh_platform_nv",
                 "TPM2_RH_AUTH_00",
-                "TPM2_RH_AUTH_FF"
+                "tpm2_rh_auth_00",
+                "TPM2_RH_AUTH_FF",
+                "tpm2_rh_auth_ff"
             ]
         },
         "TPM2_HC": {
@@ -2543,16 +3190,27 @@
             "description": "",
             "enum": [
                 "TPM2_HR_HANDLE_MASK",
+                "tpm2_hr_handle_mask",
                 "TPM2_HR_RANGE_MASK",
+                "tpm2_hr_range_mask",
                 "TPM2_HR_SHIFT",
+                "tpm2_hr_shift",
                 "TPM2_HR_PCR",
+                "tpm2_hr_pcr",
                 "TPM2_HR_HMAC_SESSION",
+                "tpm2_hr_hmac_session",
                 "TPM2_HR_POLICY_SESSION",
+                "tpm2_hr_policy_session",
                 "TPM2_HR_TRANSIENT",
+                "tpm2_hr_transient",
                 "TPM2_HR_PERSISTENT",
+                "tpm2_hr_persistent",
                 "TPM2_HR_NV_INDEX",
+                "tpm2_hr_nv_index",
                 "TPM2_HR_PERMANENT",
-                "TPM2_PLATFORM_PERSISTENT"
+                "tpm2_hr_permanent",
+                "TPM2_PLATFORM_PERSISTENT",
+                "tpm2_platform_persistent"
             ]
         },
         "TPMA_ALGORITHM": {
@@ -2569,11 +3227,9 @@
                             "symmetric",
                             "hash",
                             "object",
-                            "Reserved1",
                             "signing",
                             "encrypting",
-                            "method",
-                            "Reserved2"
+                            "method"
                         ]
                     }
                 },
@@ -2600,11 +3256,6 @@
                             "description": "${description}",
                             "$ref": "#/definitions/BOOL"
                         },
-                        "Reserved1": {
-                            "title": "Reserved1",
-                            "description": "${description}",
-                            "$ref": "#/definitions/BOOL"
-                        },
                         "signing": {
                             "title": "signing",
                             "description": "${description}",
@@ -2617,11 +3268,6 @@
                         },
                         "method": {
                             "title": "method",
-                            "description": "${description}",
-                            "$ref": "#/definitions/BOOL"
-                        },
-                        "Reserved2": {
-                            "title": "Reserved2",
                             "description": "${description}",
                             "$ref": "#/definitions/BOOL"
                         }
@@ -2639,33 +3285,23 @@
                     "items": {
                         "type": "string",
                         "enum": [
-                            "Reserved1",
                             "fixedTPM",
                             "stClear",
-                            "Reserved2",
                             "fixedParent",
                             "sensitiveDataOrigin",
                             "userWithAuth",
                             "adminWithPolicy",
-                            "Reserved3",
                             "noDA",
                             "encryptedDuplication",
-                            "Reserved4",
                             "restricted",
                             "decrypt",
-                            "sign",
-                            "Reserved5"
+                            "sign"
                         ]
                     }
                 },
                 {
                     "type": "object",
                     "properties": {
-                        "Reserved1": {
-                            "title": "Reserved1",
-                            "description": "${description}",
-                            "$ref": "#/definitions/BOOL"
-                        },
                         "fixedTPM": {
                             "title": "fixedTPM",
                             "description": "${description}",
@@ -2673,11 +3309,6 @@
                         },
                         "stClear": {
                             "title": "stClear",
-                            "description": "${description}",
-                            "$ref": "#/definitions/BOOL"
-                        },
-                        "Reserved2": {
-                            "title": "Reserved2",
                             "description": "${description}",
                             "$ref": "#/definitions/BOOL"
                         },
@@ -2701,11 +3332,6 @@
                             "description": "${description}",
                             "$ref": "#/definitions/BOOL"
                         },
-                        "Reserved3": {
-                            "title": "Reserved3",
-                            "description": "${description}",
-                            "$ref": "#/definitions/BOOL"
-                        },
                         "noDA": {
                             "title": "noDA",
                             "description": "${description}",
@@ -2713,11 +3339,6 @@
                         },
                         "encryptedDuplication": {
                             "title": "encryptedDuplication",
-                            "description": "${description}",
-                            "$ref": "#/definitions/BOOL"
-                        },
-                        "Reserved4": {
-                            "title": "Reserved4",
                             "description": "${description}",
                             "$ref": "#/definitions/BOOL"
                         },
@@ -2733,11 +3354,6 @@
                         },
                         "sign": {
                             "title": "sign",
-                            "description": "${description}",
-                            "$ref": "#/definitions/BOOL"
-                        },
-                        "Reserved5": {
-                            "title": "Reserved5",
                             "description": "${description}",
                             "$ref": "#/definitions/BOOL"
                         }
@@ -2758,7 +3374,6 @@
                             "continueSession",
                             "auditExclusive",
                             "auditReset",
-                            "Reserved1",
                             "decrypt",
                             "encrypt",
                             "audit"
@@ -2780,11 +3395,6 @@
                         },
                         "auditReset": {
                             "title": "auditReset",
-                            "description": "${description}",
-                            "$ref": "#/definitions/BOOL"
-                        },
-                        "Reserved1": {
-                            "title": "Reserved1",
                             "description": "${description}",
                             "$ref": "#/definitions/BOOL"
                         },
@@ -2876,11 +3486,9 @@
                             "ownerAuthSet",
                             "endorsementAuthSet",
                             "lockoutAuthSet",
-                            "Reserved1",
                             "disableClear",
                             "inLockout",
-                            "tpmGeneratedEPS",
-                            "Reserved2"
+                            "tpmGeneratedEPS"
                         ]
                     }
                 },
@@ -2902,11 +3510,6 @@
                             "description": "${description}",
                             "$ref": "#/definitions/BOOL"
                         },
-                        "Reserved1": {
-                            "title": "Reserved1",
-                            "description": "${description}",
-                            "$ref": "#/definitions/BOOL"
-                        },
                         "disableClear": {
                             "title": "disableClear",
                             "description": "${description}",
@@ -2919,11 +3522,6 @@
                         },
                         "tpmGeneratedEPS": {
                             "title": "tpmGeneratedEPS",
-                            "description": "${description}",
-                            "$ref": "#/definitions/BOOL"
-                        },
-                        "Reserved2": {
-                            "title": "Reserved2",
                             "description": "${description}",
                             "$ref": "#/definitions/BOOL"
                         }
@@ -2945,7 +3543,6 @@
                             "shEnable",
                             "ehEnable",
                             "phEnableNV",
-                            "Reserved1",
                             "orderly"
                         ]
                     }
@@ -2973,11 +3570,6 @@
                             "description": "${description}",
                             "$ref": "#/definitions/BOOL"
                         },
-                        "Reserved1": {
-                            "title": "Reserved1",
-                            "description": "${description}",
-                            "$ref": "#/definitions/BOOL"
-                        },
                         "orderly": {
                             "title": "orderly",
                             "description": "${description}",
@@ -2999,8 +3591,7 @@
                         "enum": [
                             "sharedRAM",
                             "sharedNV",
-                            "objectCopiedToRam",
-                            "Reserved1"
+                            "objectCopiedToRam"
                         ]
                     }
                 },
@@ -3021,11 +3612,6 @@
                             "title": "objectCopiedToRam",
                             "description": "${description}",
                             "$ref": "#/definitions/BOOL"
-                        },
-                        "Reserved1": {
-                            "title": "Reserved1",
-                            "description": "${description}",
-                            "$ref": "#/definitions/BOOL"
                         }
                     }
                 }
@@ -3042,7 +3628,6 @@
                         "type": "string",
                         "enum": [
                             "commandIndex",
-                            "Reserved1",
                             "nv",
                             "extensive",
                             "flushed",
@@ -3058,11 +3643,6 @@
                     "properties": {
                         "commandIndex": {
                             "title": "commandIndex",
-                            "description": "${description}",
-                            "$ref": "#/definitions/BOOL"
-                        },
-                        "Reserved1": {
-                            "title": "Reserved1",
                             "description": "${description}",
                             "$ref": "#/definitions/BOOL"
                         },
@@ -3115,8 +3695,7 @@
                     "items": {
                         "type": "string",
                         "enum": [
-                            "FIPS_140_2",
-                            "Reserved1"
+                            "FIPS_140_2"
                         ]
                     }
                 },
@@ -3125,11 +3704,6 @@
                     "properties": {
                         "FIPS_140_2": {
                             "title": "FIPS_140_2",
-                            "description": "${description}",
-                            "$ref": "#/definitions/BOOL"
-                        },
-                        "Reserved1": {
-                            "title": "Reserved1",
                             "description": "${description}",
                             "$ref": "#/definitions/BOOL"
                         }
@@ -3144,7 +3718,9 @@
             "description": "",
             "enum": [
                 "NO",
-                "YES"
+                "no",
+                "YES",
+                "yes"
             ]
         },
         "TPMI_DH_OBJECT": {
@@ -3190,9 +3766,13 @@
             "description": "",
             "enum": [
                 "TPM2_RH_OWNER",
+                "tpm2_rh_owner",
                 "TPM2_RH_PLATFORM",
+                "tpm2_rh_platform",
                 "TPM2_RH_ENDORSEMENT",
-                "TPM2_RH_NULL"
+                "tpm2_rh_endorsement",
+                "TPM2_RH_NULL",
+                "tpm2_rh_null"
             ]
         },
         "TPMI_RH_ENABLES": {
@@ -3202,10 +3782,15 @@
             "description": "",
             "enum": [
                 "TPM2_RH_OWNER",
+                "tpm2_rh_owner",
                 "TPM2_RH_PLATFORM",
+                "tpm2_rh_platform",
                 "TPM2_RH_ENDORSEMENT",
+                "tpm2_rh_endorsement",
                 "TPM2_RH_PLATFORM_NV",
-                "TPM2_RH_NULL"
+                "tpm2_rh_platform_nv",
+                "TPM2_RH_NULL",
+                "tpm2_rh_null"
             ]
         },
         "TPMI_RH_HIERARCHY_AUTH": {
@@ -3215,9 +3800,13 @@
             "description": "",
             "enum": [
                 "TPM2_RH_OWNER",
+                "tpm2_rh_owner",
                 "TPM2_RH_PLATFORM",
+                "tpm2_rh_platform",
                 "TPM2_RH_ENDORSEMENT",
-                "TPM2_RH_LOCKOUT"
+                "tpm2_rh_endorsement",
+                "TPM2_RH_LOCKOUT",
+                "tpm2_rh_lockout"
             ]
         },
         "TPMI_RH_PLATFORM": {
@@ -3226,7 +3815,8 @@
             "type": "string",
             "description": "",
             "enum": [
-                "TPM2_RH_PLATFORM"
+                "TPM2_RH_PLATFORM",
+                "tpm2_rh_platform"
             ]
         },
         "TPMI_RH_OWNER": {
@@ -3236,7 +3826,9 @@
             "description": "",
             "enum": [
                 "TPM2_RH_OWNER",
-                "TPM2_RH_NULL"
+                "tpm2_rh_owner",
+                "TPM2_RH_NULL",
+                "tpm2_rh_null"
             ]
         },
         "TPMI_RH_ENDORSEMENT": {
@@ -3246,7 +3838,9 @@
             "description": "",
             "enum": [
                 "TPM2_RH_ENDORSEMENT",
-                "TPM2_RH_NULL"
+                "tpm2_rh_endorsement",
+                "TPM2_RH_NULL",
+                "tpm2_rh_null"
             ]
         },
         "TPMI_RH_PROVISION": {
@@ -3256,7 +3850,9 @@
             "description": "",
             "enum": [
                 "TPM2_RH_OWNER",
-                "TPM2_RH_PLATFORM"
+                "tpm2_rh_owner",
+                "TPM2_RH_PLATFORM",
+                "tpm2_rh_platform"
             ]
         },
         "TPMI_RH_CLEAR": {
@@ -3266,7 +3862,9 @@
             "description": "",
             "enum": [
                 "TPM2_RH_LOCKOUT",
-                "TPM2_RH_PLATFORM"
+                "tpm2_rh_lockout",
+                "TPM2_RH_PLATFORM",
+                "tpm2_rh_platform"
             ]
         },
         "TPMI_RH_NV_AUTH": {
@@ -3279,7 +3877,8 @@
             "type": "string",
             "description": "",
             "enum": [
-                "TPM2_RH_LOCKOUT"
+                "TPM2_RH_LOCKOUT",
+                "tpm2_rh_lockout"
             ]
         },
         "TPMI_RH_NV_INDEX": {
@@ -3293,9 +3892,13 @@
             "description": "",
             "enum": [
                 "sha1",
+                "SHA1",
                 "sha256",
+                "SHA256",
                 "sha384",
-                "null"
+                "SHA384",
+                "null",
+                "NULL"
             ]
         },
         "TPMI_ALG_ASYM": {
@@ -3305,8 +3908,11 @@
             "description": "",
             "enum": [
                 "rsa",
+                "RSA",
                 "ecc",
-                "null"
+                "ECC",
+                "null",
+                "NULL"
             ]
         },
         "TPMI_ALG_SYM": {
@@ -3316,8 +3922,11 @@
             "description": "",
             "enum": [
                 "aes",
+                "AES",
                 "xor",
-                "null"
+                "XOR",
+                "null",
+                "NULL"
             ]
         },
         "TPMI_ALG_SYM_OBJECT": {
@@ -3327,7 +3936,9 @@
             "description": "",
             "enum": [
                 "aes",
-                "null"
+                "AES",
+                "null",
+                "NULL"
             ]
         },
         "TPMI_ALG_SYM_MODE": {
@@ -3337,11 +3948,17 @@
             "description": "",
             "enum": [
                 "ctr",
+                "CTR",
                 "ofb",
+                "OFB",
                 "cbc",
+                "CBC",
                 "cfb",
+                "CFB",
                 "ecb",
-                "null"
+                "ECB",
+                "null",
+                "NULL"
             ]
         },
         "TPMI_ALG_KDF": {
@@ -3351,9 +3968,13 @@
             "description": "",
             "enum": [
                 "mgf1",
+                "MGF1",
                 "kdf1_sp800_56a",
+                "KDF1_SP800_56A",
                 "kdf1_sp800_108",
-                "null"
+                "KDF1_SP800_108",
+                "null",
+                "NULL"
             ]
         },
         "TPMI_ALG_SIG_SCHEME": {
@@ -3363,13 +3984,23 @@
             "description": "",
             "enum": [
                 "rsaSSA",
+                "rsassa",
+                "RSASSA",
                 "rsaPSS",
+                "rsapss",
+                "RSAPSS",
                 "ecdsa",
+                "ECDSA",
                 "ecdaa",
+                "ECDAA",
                 "sm2",
+                "SM2",
                 "ecschnorr",
+                "ECSCHNORR",
                 "hmac",
-                "null"
+                "HMAC",
+                "null",
+                "NULL"
             ]
         },
         "TPMI_ECC_KEY_EXCHANGE": {
@@ -3379,8 +4010,11 @@
             "description": "",
             "enum": [
                 "ecdh",
+                "ECDH",
                 "sm2",
-                "null"
+                "SM2",
+                "null",
+                "NULL"
             ]
         },
         "TPMI_ST_COMMAND_TAG": {
@@ -3390,12 +4024,14 @@
             "description": "",
             "enum": [
                 "TPM2_ST_NO_SESSIONS",
-                "TPM2_ST_SESSIONS"
+                "tpm2_st_no_sessions",
+                "TPM2_ST_SESSIONS",
+                "tpm2_st_sessions"
             ]
         },
         "TPMS_ALGORITHM_DESCRIPTION": {
             "title": "TPMS_ALGORITHM_DESCRIPTION",
-            "description": "Table 70 - Definition of TPMS_ALGORITHM_DESCRIPTION Structure OUTTable 70 - Definition of TPMS_ALGORITHM_DESCRIPTION Structure OUT",
+            "description": "Definition of TPMS_ALGORITHM_DESCRIPTION Structure OUT",
             "type": "object",
             "required": [
                 "alg",
@@ -3421,7 +4057,7 @@
         },
         "Digest Value": {
             "title": "Digest Value",
-            "description": "Table 72 - Definition of Digest Value Structure IN/OUTTable 72 - Definition of Digest Value Structure IN/OUT",
+            "description": "Definition of Digest Value Structure IN/OUT",
             "type": "object",
             "required": [
                 "hashAlg",
@@ -3440,10 +4076,10 @@
                 {
                     "title": "sha1",
                     "properties": {
-                        "hashAlg": { 
+                        "hashAlg": {
                             "type": "string",
                             "enum": [
-                                "sha1"
+                                "sha1","SHA1"
                             ]
                         },
                         "digest": {
@@ -3455,10 +4091,10 @@
                 {
                     "title": "sha256",
                     "properties": {
-                        "hashAlg": { 
+                        "hashAlg": {
                             "type": "string",
                             "enum": [
-                                "sha256"
+                                "sha256","SHA256"
                             ]
                         },
                         "digest": {
@@ -3470,15 +4106,26 @@
                 {
                     "title": "sha384",
                     "properties": {
-                        "hashAlg": { 
+                        "hashAlg": {
                             "type": "string",
                             "enum": [
-                                "sha384"
+                                "sha384","SHA384"
                             ]
                         },
                         "digest": {
                             "title": "digest",
                             "$ref": "#/definitions/TPM2B_GENERIC"
+                        }
+                    }
+                },
+                {
+                    "title": "null",
+                    "properties": {
+                        "hashAlg": {
+                            "type": "string",
+                            "enum": [
+                                "null","NULL"
+                            ]
                         }
                     }
                 }
@@ -3498,7 +4145,7 @@
         },
         "TPMT_TK_CREATION": {
             "title": "TPMT_TK_CREATION",
-            "description": "Table 89 - Definition of TPMT_TK_CREATION StructureTable 89 - Definition of TPMT_TK_CREATION Structure",
+            "description": "Definition of TPMT_TK_CREATION Structure",
             "type": "object",
             "required": [
                 "tag",
@@ -3525,7 +4172,7 @@
         },
         "TPMT_TK_VERIFIED": {
             "title": "TPMT_TK_VERIFIED",
-            "description": "Table 90 - Definition of TPMT_TK_VERIFIED StructureTable 90 - Definition of TPMT_TK_VERIFIED Structure",
+            "description": "Definition of TPMT_TK_VERIFIED Structure",
             "type": "object",
             "required": [
                 "tag",
@@ -3552,7 +4199,7 @@
         },
         "TPMT_TK_AUTH": {
             "title": "TPMT_TK_AUTH",
-            "description": "Table 91 - Definition of TPMT_TK_AUTH StructureTable 91 - Definition of TPMT_TK_AUTH Structure",
+            "description": "Definition of TPMT_TK_AUTH Structure",
             "type": "object",
             "required": [
                 "tag",
@@ -3579,7 +4226,7 @@
         },
         "TPMT_TK_HASHCHECK": {
             "title": "TPMT_TK_HASHCHECK",
-            "description": "Table 92 - Definition of TPMT_TK_HASHCHECK StructureTable 92 - Definition of TPMT_TK_HASHCHECK Structure",
+            "description": "Definition of TPMT_TK_HASHCHECK Structure",
             "type": "object",
             "required": [
                 "tag",
@@ -3606,7 +4253,7 @@
         },
         "TPMS_ALG_PROPERTY": {
             "title": "TPMS_ALG_PROPERTY",
-            "description": "Table 93 - Definition of TPMS_ALG_PROPERTY Structure OUTTable 93 - Definition of TPMS_ALG_PROPERTY Structure OUT",
+            "description": "Definition of TPMS_ALG_PROPERTY Structure OUT",
             "type": "object",
             "required": [
                 "alg",
@@ -3627,7 +4274,7 @@
         },
         "TPMS_TAGGED_PROPERTY": {
             "title": "TPMS_TAGGED_PROPERTY",
-            "description": "Table 94 - Definition of TPMS_TAGGED_PROPERTY Structure OUTTable 94 - Definition of TPMS_TAGGED_PROPERTY Structure OUT",
+            "description": "Definition of TPMS_TAGGED_PROPERTY Structure OUT",
             "type": "object",
             "required": [
                 "property",
@@ -3649,7 +4296,7 @@
         },
         "TPMS_TAGGED_PCR_SELECT": {
             "title": "TPMS_TAGGED_PCR_SELECT",
-            "description": "Table 95 - Definition of TPMS_TAGGED_PCR_SELECT Structure OUTTable 95 - Definition of TPMS_TAGGED_PCR_SELECT Structure OUT",
+            "description": "Definition of TPMS_TAGGED_PCR_SELECT Structure OUT",
             "type": "object",
             "required": [
                 "tag",
@@ -3675,7 +4322,7 @@
         },
         "TPMS_TAGGED_POLICY": {
             "title": "TPMS_TAGGED_POLICY",
-            "description": "Table 96 - Definition of TPMS_TAGGED_POLICY Structure OUTTable 96 - Definition of TPMS_TAGGED_POLICY Structure OUT",
+            "description": "Definition of TPMS_TAGGED_POLICY Structure OUT",
             "type": "object",
             "required": [
                 "handle",
@@ -3696,7 +4343,7 @@
         },
         "TPML_CC": {
             "title": "TPML_CC",
-            "description": "Table 97 - Definition of TPML_CC StructureTable 97 - Definition of TPML_CC Structure",
+            "description": "Definition of TPML_CC Structure",
             "type": "array",
             "maxItems": 256,
             "items":
@@ -3707,7 +4354,7 @@
         },
         "TPML_CCA": {
             "title": "TPML_CCA",
-            "description": "Table 98 - Definition of TPML_CCA Structure OUTTable 98 - Definition of TPML_CCA Structure OUT",
+            "description": "Definition of TPML_CCA Structure OUT",
             "type": "array",
             "maxItems": 256,
             "items":
@@ -3718,7 +4365,7 @@
         },
         "TPML_ALG": {
             "title": "TPML_ALG",
-            "description": "Table 99 - Definition of TPML_ALG StructureTable 99 - Definition of TPML_ALG Structure",
+            "description": "Definition of TPML_ALG Structure",
             "type": "array",
             "maxItems": 128,
             "items":
@@ -3729,7 +4376,7 @@
         },
         "TPML_HANDLE": {
             "title": "TPML_HANDLE",
-            "description": "Table 100 - Definition of TPML_HANDLE Structure OUTTable 100 - Definition of TPML_HANDLE Structure OUT",
+            "description": "Definition of TPML_HANDLE Structure OUT",
             "type": "array",
             "maxItems": 254,
             "items":
@@ -3740,7 +4387,7 @@
         },
         "TPML_DIGEST": {
             "title": "TPML_DIGEST",
-            "description": "Table 101 - Definition of TPML_DIGEST StructureTable 101 - Definition of TPML_DIGEST Structure",
+            "description": "Definition of TPML_DIGEST Structure",
             "type": "array",
             "maxItems": 8,
             "items":
@@ -3751,7 +4398,7 @@
         },
         "PolicyDigests": {
             "title": "PolicyDigests",
-            "description": "Table 102 - Definition of PolicyDigests StructureTable 102 - Definition of PolicyDigests Structure",
+            "description": "Definition of PolicyDigests Structure",
             "type": "array",
             "maxItems": 16,
             "items":
@@ -3762,7 +4409,7 @@
         },
         "TPML_PCR_SELECTION": {
             "title": "TPML_PCR_SELECTION",
-            "description": "Table 103 - Definition of TPML_PCR_SELECTION StructureTable 103 - Definition of TPML_PCR_SELECTION Structure",
+            "description": "Definition of TPML_PCR_SELECTION Structure",
             "type": "array",
             "maxItems": 16,
             "items":
@@ -3773,7 +4420,7 @@
         },
         "TPML_ALG_PROPERTY": {
             "title": "TPML_ALG_PROPERTY",
-            "description": "Table 104 - Definition of TPML_ALG_PROPERTY Structure OUTTable 104 - Definition of TPML_ALG_PROPERTY Structure OUT",
+            "description": "Definition of TPML_ALG_PROPERTY Structure OUT",
             "type": "array",
             "maxItems": 127,
             "items":
@@ -3784,7 +4431,7 @@
         },
         "TPML_TAGGED_TPM_PROPERTY": {
             "title": "TPML_TAGGED_TPM_PROPERTY",
-            "description": "TPM2_Table 105 - TPM2_Definition of TPM2_TPML_TAGGED_TPM_PROPERTY TPM2_Structure TPM2_OUTTable 105 - TPM2_Definition of TPM2_TPML_TAGGED_TPM_PROPERTY TPM2_Structure TPM2_OUT",
+            "description": "Definition of TPM2_TPML_TAGGED_TPM_PROPERTY TPM2_Structure TPM2_OUT",
             "type": "array",
             "maxItems": 127,
             "items":
@@ -3795,7 +4442,7 @@
         },
         "TPML_TAGGED_PCR_PROPERTY": {
             "title": "TPML_TAGGED_PCR_PROPERTY",
-            "description": "Table 106 - Definition of TPML_TAGGED_PCR_PROPERTY Structure OUTTable 106 - Definition of TPML_TAGGED_PCR_PROPERTY Structure OUT",
+            "description": "Definition of TPML_TAGGED_PCR_PROPERTY Structure OUT",
             "type": "array",
             "maxItems": 84,
             "items":
@@ -3806,7 +4453,7 @@
         },
         "TPML_ECC_CURVE": {
             "title": "TPML_ECC_CURVE",
-            "description": "Table 107 - Definition of Table 107 - Definition of  TPML_ECC_CURVE Structure OUT",
+            "description": "Definition of  TPML_ECC_CURVE Structure OUT",
             "type": "array",
             "maxItems": 508,
             "items":
@@ -3817,7 +4464,7 @@
         },
         "TPML_TAGGED_POLICY": {
             "title": "TPML_TAGGED_POLICY",
-            "description": "Table 108 - Definition of TPML_TAGGED_POLICY Structure OUTTable 108 - Definition of TPML_TAGGED_POLICY Structure OUT",
+            "description": "Definition of TPML_TAGGED_POLICY Structure OUT",
             "type": "array",
             "maxItems": 14,
             "items":
@@ -3843,9 +4490,6 @@
                     "$ref": "#/definitions/TPML_CC"
                 },
                 {
-                    "$ref": "#/definitions/TPML_CC"
-                },
-                {
                     "$ref": "#/definitions/TPML_PCR_SELECTION"
                 },
                 {
@@ -3864,7 +4508,7 @@
         },
         "TPMS_CAPABILITY_DATA": {
             "title": "TPMS_CAPABILITY_DATA",
-            "description": "Table 110 - Definition of TPMS_CAPABILITY_DATA Structure OUTTable 110 - Definition of TPMS_CAPABILITY_DATA Structure OUT",
+            "description": "Definition of TPMS_CAPABILITY_DATA Structure OUT",
             "type": "object",
             "required": [
                 "capability",
@@ -3881,12 +4525,12 @@
             },
             "oneOf": [
                 {
-                    "title": "TPM2_CAP_ALGS",
+                    "title": "ALGS",
                     "properties": {
-                        "capability": { 
+                        "capability": {
                             "type": "string",
                             "enum": [
-                                "TPM2_CAP_ALGS"
+                                "ALGS","algs"
                             ]
                         },
                         "data": {
@@ -3896,12 +4540,12 @@
                     }
                 },
                 {
-                    "title": "TPM2_CAP_HANDLES",
+                    "title": "HANDLES",
                     "properties": {
-                        "capability": { 
+                        "capability": {
                             "type": "string",
                             "enum": [
-                                "TPM2_CAP_HANDLES"
+                                "HANDLES","handles"
                             ]
                         },
                         "data": {
@@ -3911,12 +4555,12 @@
                     }
                 },
                 {
-                    "title": "TPM2_CAP_COMMANDS",
+                    "title": "COMMANDS",
                     "properties": {
-                        "capability": { 
+                        "capability": {
                             "type": "string",
                             "enum": [
-                                "TPM2_CAP_COMMANDS"
+                                "COMMANDS","commands"
                             ]
                         },
                         "data": {
@@ -3926,12 +4570,12 @@
                     }
                 },
                 {
-                    "title": "TPM2_CAP_PP_COMMANDS",
+                    "title": "PP_COMMANDS",
                     "properties": {
-                        "capability": { 
+                        "capability": {
                             "type": "string",
                             "enum": [
-                                "TPM2_CAP_PP_COMMANDS"
+                                "PP_COMMANDS","pp_commands"
                             ]
                         },
                         "data": {
@@ -3941,12 +4585,12 @@
                     }
                 },
                 {
-                    "title": "TPM2_CAP_AUDIT_COMMANDS",
+                    "title": "AUDIT_COMMANDS",
                     "properties": {
-                        "capability": { 
+                        "capability": {
                             "type": "string",
                             "enum": [
-                                "TPM2_CAP_AUDIT_COMMANDS"
+                                "AUDIT_COMMANDS","audit_commands"
                             ]
                         },
                         "data": {
@@ -3956,12 +4600,12 @@
                     }
                 },
                 {
-                    "title": "TPM2_CAP_PCRS",
+                    "title": "PCRS",
                     "properties": {
-                        "capability": { 
+                        "capability": {
                             "type": "string",
                             "enum": [
-                                "TPM2_CAP_PCRS"
+                                "PCRS","pcrs"
                             ]
                         },
                         "data": {
@@ -3971,12 +4615,12 @@
                     }
                 },
                 {
-                    "title": "TPM2_CAP_TPM_PROPERTIES",
+                    "title": "TPM_PROPERTIES",
                     "properties": {
-                        "capability": { 
+                        "capability": {
                             "type": "string",
                             "enum": [
-                                "TPM2_CAP_TPM_PROPERTIES"
+                                "TPM_PROPERTIES","tpm_properties"
                             ]
                         },
                         "data": {
@@ -3986,12 +4630,12 @@
                     }
                 },
                 {
-                    "title": "TPM2_CAP_PCR_PROPERTIES",
+                    "title": "PCR_PROPERTIES",
                     "properties": {
-                        "capability": { 
+                        "capability": {
                             "type": "string",
                             "enum": [
-                                "TPM2_CAP_PCR_PROPERTIES"
+                                "PCR_PROPERTIES","pcr_properties"
                             ]
                         },
                         "data": {
@@ -4001,12 +4645,12 @@
                     }
                 },
                 {
-                    "title": "TPM2_CAP_ECC_CURVES",
+                    "title": "ECC_CURVES",
                     "properties": {
-                        "capability": { 
+                        "capability": {
                             "type": "string",
                             "enum": [
-                                "TPM2_CAP_ECC_CURVES"
+                                "ECC_CURVES","ecc_curves"
                             ]
                         },
                         "data": {
@@ -4016,12 +4660,12 @@
                     }
                 },
                 {
-                    "title": "TPM2_CAP_AUTH_POLICIES",
+                    "title": "AUTH_POLICIES",
                     "properties": {
-                        "capability": { 
+                        "capability": {
                             "type": "string",
                             "enum": [
-                                "TPM2_CAP_AUTH_POLICIES"
+                                "AUTH_POLICIES","auth_policies"
                             ]
                         },
                         "data": {
@@ -4034,7 +4678,7 @@
         },
         "TPMS_CLOCK_INFO": {
             "title": "TPMS_CLOCK_INFO",
-            "description": "Table 111 - Definition of TPMS_CLOCK_INFO StructureTable 111 - Definition of TPMS_CLOCK_INFO Structure",
+            "description": "Definition of TPMS_CLOCK_INFO Structure",
             "type": "object",
             "required": [
                 "clock",
@@ -4070,7 +4714,7 @@
         },
         "TPMS_TIME_INFO": {
             "title": "TPMS_TIME_INFO",
-            "description": "Table 112 - Definition of TPMS_TIME_INFO StructureTable 112 - Definition of TPMS_TIME_INFO Structure",
+            "description": "Definition of TPMS_TIME_INFO Structure",
             "type": "object",
             "required": [
                 "time",
@@ -4092,7 +4736,7 @@
         },
         "TPMS_TIME_ATTEST_INFO": {
             "title": "TPMS_TIME_ATTEST_INFO",
-            "description": "Table 113 - Definition of TPMS_TIME_ATTEST_INFO Structure OUTTable 113 - Definition of TPMS_TIME_ATTEST_INFO Structure OUT",
+            "description": "Definition of TPMS_TIME_ATTEST_INFO Structure OUT",
             "type": "object",
             "required": [
                 "time",
@@ -4114,7 +4758,7 @@
         },
         "TPMS_CERTIFY_INFO": {
             "title": "TPMS_CERTIFY_INFO",
-            "description": "Table 114 - Definition of TPMS_CERTIFY_INFO Structure OUTTable 114 - Definition of TPMS_CERTIFY_INFO Structure OUT",
+            "description": "Definition of TPMS_CERTIFY_INFO Structure OUT",
             "type": "object",
             "required": [
                 "name",
@@ -4135,7 +4779,7 @@
         },
         "TPMS_QUOTE_INFO": {
             "title": "TPMS_QUOTE_INFO",
-            "description": "Table 115 - Definition of TPMS_QUOTE_INFO Structure OUTTable 115 - Definition of TPMS_QUOTE_INFO Structure OUT",
+            "description": "Definition of TPMS_QUOTE_INFO Structure OUT",
             "type": "object",
             "required": [
                 "pcrSelect",
@@ -4156,7 +4800,7 @@
         },
         "TPMS_COMMAND_AUDIT_INFO": {
             "title": "TPMS_COMMAND_AUDIT_INFO",
-            "description": "Table 116 - Definition of TPMS_COMMAND_AUDIT_INFO Structure OUTTable 116 - Definition of TPMS_COMMAND_AUDIT_INFO Structure OUT",
+            "description": "Definition of TPMS_COMMAND_AUDIT_INFO Structure OUT",
             "type": "object",
             "required": [
                 "auditCounter",
@@ -4190,7 +4834,7 @@
         },
         "TPMS_SESSION_AUDIT_INFO": {
             "title": "TPMS_SESSION_AUDIT_INFO",
-            "description": "Table 117 - Definition of TPMS_SESSION_AUDIT_INFO Structure OUTTable 117 - Definition of TPMS_SESSION_AUDIT_INFO Structure OUT",
+            "description": "Definition of TPMS_SESSION_AUDIT_INFO Structure OUT",
             "type": "object",
             "required": [
                 "exclusiveSession",
@@ -4211,7 +4855,7 @@
         },
         "TPMS_CREATION_INFO": {
             "title": "TPMS_CREATION_INFO",
-            "description": "Table 118 - Definition of TPMS_CREATION_INFO Structure OUTTable 118 - Definition of TPMS_CREATION_INFO Structure OUT",
+            "description": "Definition of TPMS_CREATION_INFO Structure OUT",
             "type": "object",
             "required": [
                 "objectName",
@@ -4232,7 +4876,7 @@
         },
         "TPMS_NV_CERTIFY_INFO": {
             "title": "TPMS_NV_CERTIFY_INFO",
-            "description": "Table 119 - Definition of TPMS_NV_CERTIFY_INFO Structure OUTTable 119 - Definition of TPMS_NV_CERTIFY_INFO Structure OUT",
+            "description": "Definition of TPMS_NV_CERTIFY_INFO Structure OUT",
             "type": "object",
             "required": [
                 "indexName",
@@ -4265,12 +4909,19 @@
             "description": "",
             "enum": [
                 "TPM2_ST_ATTEST_CERTIFY",
+                "tpm2_st_attest_certify",
                 "TPM2_ST_ATTEST_QUOTE",
+                "tpm2_st_attest_quote",
                 "TPM2_ST_ATTEST_SESSION_AUDIT",
+                "tpm2_st_attest_session_audit",
                 "TPM2_ST_ATTEST_COMMAND_AUDIT",
+                "tpm2_st_attest_command_audit",
                 "TPM2_ST_ATTEST_TIME",
+                "tpm2_st_attest_time",
                 "TPM2_ST_ATTEST_CREATION",
-                "TPM2_ST_ATTEST_NV"
+                "tpm2_st_attest_creation",
+                "TPM2_ST_ATTEST_NV",
+                "tpm2_st_attest_nv"
             ]
         },
         "TPMU_ATTEST": {
@@ -4302,7 +4953,7 @@
         },
         "TPMS_ATTEST": {
             "title": "TPMS_ATTEST",
-            "description": "Table 122 - Definition of TPMS_ATTEST Structure OUTTable 122 - Definition of TPMS_ATTEST Structure OUT",
+            "description": "Definition of TPMS_ATTEST Structure OUT",
             "type": "object",
             "required": [
                 "magic",
@@ -4352,10 +5003,10 @@
                 {
                     "title": "TPM2_ST_ATTEST_CERTIFY",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
-                                "TPM2_ST_ATTEST_CERTIFY"
+                                "TPM2_ST_ATTEST_CERTIFY","tpm2_st_attest_certify"
                             ]
                         },
                         "attested": {
@@ -4367,10 +5018,10 @@
                 {
                     "title": "TPM2_ST_ATTEST_CREATION",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
-                                "TPM2_ST_ATTEST_CREATION"
+                                "TPM2_ST_ATTEST_CREATION","tpm2_st_attest_creation"
                             ]
                         },
                         "attested": {
@@ -4382,10 +5033,10 @@
                 {
                     "title": "TPM2_ST_ATTEST_QUOTE",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
-                                "TPM2_ST_ATTEST_QUOTE"
+                                "TPM2_ST_ATTEST_QUOTE","tpm2_st_attest_quote"
                             ]
                         },
                         "attested": {
@@ -4397,10 +5048,10 @@
                 {
                     "title": "TPM2_ST_ATTEST_COMMAND_AUDIT",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
-                                "TPM2_ST_ATTEST_COMMAND_AUDIT"
+                                "TPM2_ST_ATTEST_COMMAND_AUDIT","tpm2_st_attest_command_audit"
                             ]
                         },
                         "attested": {
@@ -4412,10 +5063,10 @@
                 {
                     "title": "TPM2_ST_ATTEST_SESSION_AUDIT",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
-                                "TPM2_ST_ATTEST_SESSION_AUDIT"
+                                "TPM2_ST_ATTEST_SESSION_AUDIT","tpm2_st_attest_session_audit"
                             ]
                         },
                         "attested": {
@@ -4427,10 +5078,10 @@
                 {
                     "title": "TPM2_ST_ATTEST_TIME",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
-                                "TPM2_ST_ATTEST_TIME"
+                                "TPM2_ST_ATTEST_TIME","tpm2_st_attest_time"
                             ]
                         },
                         "attested": {
@@ -4442,10 +5093,10 @@
                 {
                     "title": "TPM2_ST_ATTEST_NV",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
-                                "TPM2_ST_ATTEST_NV"
+                                "TPM2_ST_ATTEST_NV","tpm2_st_attest_nv"
                             ]
                         },
                         "attested": {
@@ -4458,7 +5109,7 @@
         },
         "TPMS_AUTH_COMMAND": {
             "title": "TPMS_AUTH_COMMAND",
-            "description": "Table 124 - Definition of TPMS_AUTH_COMMAND Structure INTable 124 - Definition of TPMS_AUTH_COMMAND Structure IN",
+            "description": "Definition of TPMS_AUTH_COMMAND Structure IN",
             "type": "object",
             "required": [
                 "sessionHandle",
@@ -4491,7 +5142,7 @@
         },
         "TPMS_AUTH_RESPONSE": {
             "title": "TPMS_AUTH_RESPONSE",
-            "description": "Table 125 - Definition of TPMS_AUTH_RESPONSE Structure OUTTable 125 - Definition of TPMS_AUTH_RESPONSE Structure OUT",
+            "description": "Definition of TPMS_AUTH_RESPONSE Structure OUT",
             "type": "object",
             "required": [
                 "nonce",
@@ -4518,11 +5169,11 @@
         },
         "TPMI_AES_KEY_BITS": {
             "title": "TPMI_AES_KEY_BITS",
-            "default": "TPM2_AES_KEY_SIZES_BITS",
-            "type": "string",
+            "default": 256,
+            "type": "number",
             "description": "",
             "enum": [
-                "TPM2_AES_KEY_SIZES_BITS"
+                128, 192, 256
             ]
         },
         "TPMU_SYM_KEY_BITS": {
@@ -4533,13 +5184,10 @@
                     "$ref": "#/definitions/TPMI_AES_KEY_BITS"
                 },
                 {
-                    "$ref": "#/definitions/TPM2_KEY_BITS"
-                },
-                {
                     "$ref": "#/definitions/TPMI_ALG_HASH"
                 },
                 {
-                    "$ref": "#/definitions/"
+                    "$ref": "#/definitions/TPMS_EMPTY"
                 }
             ]
         },
@@ -4551,25 +5199,18 @@
                     "$ref": "#/definitions/TPMI_ALG_SYM_MODE"
                 },
                 {
-                    "$ref": "#/definitions/TPMI_ALG_SYM_MODE"
-                },
-                {
-                    "$ref": "#/definitions/"
-                },
-                {
-                    "$ref": "#/definitions/"
+                    "$ref": "#/definitions/TPMS_EMPTY"
                 }
             ]
         },
         "TPMT_SYM_DEF": {
             "title": "TPMT_SYM_DEF",
-            "description": "Table 130 - Definition of TPMT_SYM_DEF StructureTable 130 - Definition of TPMT_SYM_DEF Structure",
+            "description": "Definition of TPMT_SYM_DEF Structure",
             "type": "object",
             "required": [
                 "algorithm",
                 "keyBits",
-                "mode",
-                "//"
+                "mode"
             ],
             "properties": {
                 "algorithm": {
@@ -4582,26 +5223,16 @@
                 "mode": {
                     "title": "mode",
                     "$ref": "#/definitions/TPMU_SYM_MODE"
-                },
-                "//":
-                {
-                    "type": "array",
-                    "minimum": 1,
-                    "maximum": 3,
-                    "items": {
-                        "title": "ObjectName",
-                        "$ref": "#/definitions/TPMU_SYM_DETAILS"
-                    }
                 }
             },
             "oneOf": [
                 {
                     "title": "aes",
                     "properties": {
-                        "algorithm": { 
+                        "algorithm": {
                             "type": "string",
                             "enum": [
-                                "aes"
+                                "aes","AES"
                             ]
                         },
                         "keyBits": {
@@ -4611,32 +5242,28 @@
                     }
                 },
                 {
-                    "title": "",
-                    "properties": {
-                        "algorithm": { 
-                            "type": "string",
-                            "enum": [
-                                ""
-                            ]
-                        },
-                        "keyBits": {
-                            "title": "keyBits",
-                            "$ref": "#/definitions/TPM2_KEY_BITS"
-                        }
-                    }
-                },
-                {
                     "title": "xor",
                     "properties": {
-                        "algorithm": { 
+                        "algorithm": {
                             "type": "string",
                             "enum": [
-                                "xor"
+                                "xor","XOR"
                             ]
                         },
                         "keyBits": {
                             "title": "keyBits",
                             "$ref": "#/definitions/TPMI_ALG_HASH"
+                        }
+                    }
+                },
+                {
+                    "title": "null",
+                    "properties": {
+                        "algorithm": {
+                            "type": "string",
+                            "enum": [
+                                "null","NULL"
+                            ]
                         }
                     }
                 }
@@ -4646,10 +5273,10 @@
                 {
                     "title": "aes",
                     "properties": {
-                        "algorithm": { 
+                        "algorithm": {
                             "type": "string",
                             "enum": [
-                                "aes"
+                                "aes","AES"
                             ]
                         },
                         "mode": {
@@ -4661,7 +5288,7 @@
                 {
                     "title": "",
                     "properties": {
-                        "algorithm": { 
+                        "algorithm": {
                             "type": "string",
                             "enum": [
                                 ""
@@ -4676,15 +5303,26 @@
                 {
                     "title": "xor",
                     "properties": {
-                        "algorithm": { 
+                        "algorithm": {
                             "type": "string",
                             "enum": [
-                                "xor"
+                                "xor","XOR"
                             ]
                         },
                         "mode": {
                             "title": "mode",
-                            "$ref": "#/definitions/"
+                            "$ref": "#/definitions/TPMS_EMPTY"
+                        }
+                    }
+                },
+                {
+                    "title": "null",
+                    "properties": {
+                        "algorithm": {
+                            "type": "string",
+                            "enum": [
+                                "null","NULL"
+                            ]
                         }
                     }
                 }
@@ -4692,75 +5330,54 @@
         },
         "TPMT_SYM_DEF_OBJECT": {
             "title": "TPMT_SYM_DEF_OBJECT",
-            "description": "Table 131 - Definition of TPMT_SYM_DEF_OBJECT StructureTable 131 - Definition of TPMT_SYM_DEF_OBJECT Structure",
+            "description": "Definition of TPMT_SYM_DEF_OBJECT Structure",
             "type": "object",
             "required": [
-                "algorithm",
-                "keyBits",
-                "mode",
-                "//"
+                "algorithm"
             ],
             "properties": {
                 "algorithm": {
                     "type": "string"
-                },
-                "keyBits": {
-                    "title": "keyBits",
-                    "$ref": "#/definitions/TPMU_SYM_KEY_BITS"
-                },
-                "mode": {
-                    "title": "mode",
-                    "$ref": "#/definitions/TPMU_SYM_MODE"
-                },
-                "//":
-                {
-                    "type": "array",
-                    "minimum": 1,
-                    "maximum": 3,
-                    "items": {
-                        "title": "ObjectName",
-                        "$ref": "#/definitions/TPMU_SYM_DETAILS"
-                    }
                 }
             },
             "oneOf": [
                 {
-                    "title": "aes",
+                    "title": "null",
                     "properties": {
-                        "algorithm": { 
+                        "algorithm": {
                             "type": "string",
                             "enum": [
-                                "aes"
+                                "null","NULL"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "title": "aes",
+                    "properties": {
+                        "algorithm": {
+                            "type": "string",
+                            "enum": [
+                                "aes","AES"
                             ]
                         },
                         "keyBits": {
                             "title": "keyBits",
                             "$ref": "#/definitions/TPMI_AES_KEY_BITS"
-                        }
-                    }
-                },
-                {
-                    "title": "",
-                    "properties": {
-                        "algorithm": { 
-                            "type": "string",
-                            "enum": [
-                                ""
-                            ]
                         },
-                        "keyBits": {
-                            "title": "keyBits",
-                            "$ref": "#/definitions/TPM2_KEY_BITS"
+                        "mode": {
+                            "title": "mode",
+                            "$ref": "#/definitions/TPMI_ALG_SYM_MODE"
                         }
                     }
                 },
                 {
                     "title": "xor",
                     "properties": {
-                        "algorithm": { 
+                        "algorithm": {
                             "type": "string",
                             "enum": [
-                                "xor"
+                                "xor","XOR"
                             ]
                         },
                         "keyBits": {
@@ -4770,58 +5387,10 @@
                     }
                 }
             ]
-            ,
-            "oneOf": [
-                {
-                    "title": "aes",
-                    "properties": {
-                        "algorithm": { 
-                            "type": "string",
-                            "enum": [
-                                "aes"
-                            ]
-                        },
-                        "mode": {
-                            "title": "mode",
-                            "$ref": "#/definitions/TPMI_ALG_SYM_MODE"
-                        }
-                    }
-                },
-                {
-                    "title": "",
-                    "properties": {
-                        "algorithm": { 
-                            "type": "string",
-                            "enum": [
-                                ""
-                            ]
-                        },
-                        "mode": {
-                            "title": "mode",
-                            "$ref": "#/definitions/TPMI_ALG_SYM_MODE"
-                        }
-                    }
-                },
-                {
-                    "title": "xor",
-                    "properties": {
-                        "algorithm": { 
-                            "type": "string",
-                            "enum": [
-                                "xor"
-                            ]
-                        },
-                        "mode": {
-                            "title": "mode",
-                            "$ref": "#/definitions/"
-                        }
-                    }
-                }
-            ]
         },
         "TPMS_SYMCIPHER_PARMS": {
             "title": "TPMS_SYMCIPHER_PARMS",
-            "description": "Table 133 - Definition of TPMS_SYMCIPHER_PARMS StructureTable 133 - Definition of TPMS_SYMCIPHER_PARMS Structure",
+            "description": "Definition of TPMS_SYMCIPHER_PARMS Structure",
             "type": "object",
             "required": [
                 "sym"
@@ -4836,7 +5405,7 @@
         },
         "TPMS_DERIVE": {
             "title": "TPMS_DERIVE",
-            "description": "Table 135 - Definition of TPMS_DERIVE StructureTable 135 - Definition of TPMS_DERIVE Structure",
+            "description": "Definition of TPMS_DERIVE Structure",
             "type": "object",
             "required": [
                 "label",
@@ -4857,7 +5426,7 @@
         },
         "TPMS_SENSITIVE_CREATE": {
             "title": "TPMS_SENSITIVE_CREATE",
-            "description": "Table 139 - Definition of TPMS_SENSITIVE_CREATE Structure INTable 139 - Definition of TPMS_SENSITIVE_CREATE Structure IN",
+            "description": "Definition of TPMS_SENSITIVE_CREATE Structure IN",
             "type": "object",
             "required": [
                 "userAuth",
@@ -4878,7 +5447,7 @@
         },
         "TPM2B_SENSITIVE_CREATE": {
             "title": "TPM2B_SENSITIVE_CREATE",
-            "description": "Table 140 - Definition of TPM2B_SENSITIVE_CREATE Structure <IN, S>Table 140 - Definition of TPM2B_SENSITIVE_CREATE Structure <IN, S>",
+            "description": "Definition of TPM2B_SENSITIVE_CREATE Structure <IN, S>",
             "type": "object",
             "required": [
                 "size",
@@ -4900,7 +5469,7 @@
         },
         "TPMS_SCHEME_HASH": {
             "title": "TPMS_SCHEME_HASH",
-            "description": "Table 141 - Definition of TPMS_SCHEME_HASH StructureTable 141 - Definition of TPMS_SCHEME_HASH Structure",
+            "description": "Definition of TPMS_SCHEME_HASH Structure",
             "type": "object",
             "required": [
                 "hashAlg"
@@ -4915,7 +5484,7 @@
         },
         "TPMS_SCHEME_ECDAA": {
             "title": "TPMS_SCHEME_ECDAA",
-            "description": "Table 142 - Definition of Table 142 - Definition of  TPMS_SCHEME_ECDAA Structure",
+            "description": "Definition of  TPMS_SCHEME_ECDAA Structure",
             "type": "object",
             "required": [
                 "hashAlg",
@@ -4942,13 +5511,16 @@
             "description": "",
             "enum": [
                 "hmac",
+                "HMAC",
                 "xor",
-                "null"
+                "XOR",
+                "null",
+                "NULL"
             ]
         },
         "TPMS_SCHEME_XOR": {
             "title": "TPMS_SCHEME_XOR",
-            "description": "Table 145 - Definition of TPMS_SCHEME_XOR StructureTable 145 - Definition of TPMS_SCHEME_XOR Structure",
+            "description": "Definition of TPMS_SCHEME_XOR Structure",
             "type": "object",
             "required": [
                 "hashAlg",
@@ -4978,13 +5550,13 @@
                     "$ref": "#/definitions/TPMS_SCHEME_XOR"
                 },
                 {
-                    "$ref": "#/definitions/"
+                    "$ref": "#/definitions/TPMS_EMPTY"
                 }
             ]
         },
         "TPMT_KEYEDHASH_SCHEME": {
             "title": "TPMT_KEYEDHASH_SCHEME",
-            "description": "Table 147 - Definition of TPMT_KEYEDHASH_SCHEME StructureTable 147 - Definition of TPMT_KEYEDHASH_SCHEME Structure",
+            "description": "Definition of TPMT_KEYEDHASH_SCHEME Structure",
             "type": "object",
             "required": [
                 "scheme",
@@ -5003,10 +5575,10 @@
                 {
                     "title": "hmac",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "hmac"
+                                "hmac","HMAC"
                             ]
                         },
                         "details": {
@@ -5018,15 +5590,26 @@
                 {
                     "title": "xor",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "xor"
+                                "xor","XOR"
                             ]
                         },
                         "details": {
                             "title": "details",
                             "$ref": "#/definitions/TPMS_SCHEME_XOR"
+                        }
+                    }
+                },
+                {
+                    "title": "null",
+                    "properties": {
+                        "scheme": {
+                            "type": "string",
+                            "enum": [
+                                "null","NULL"
+                            ]
                         }
                     }
                 }
@@ -5061,13 +5644,13 @@
                     "$ref": "#/definitions/TPMS_SCHEME_HASH"
                 },
                 {
-                    "$ref": "#/definitions/"
+                    "$ref": "#/definitions/TPMS_EMPTY"
                 }
             ]
         },
         "TPMT_SIG_SCHEME": {
             "title": "TPMT_SIG_SCHEME",
-            "description": "Table 151 - Definition of TPMT_SIG_SCHEME StructureTable 151 - Definition of TPMT_SIG_SCHEME Structure",
+            "description": "Definition of TPMT_SIG_SCHEME Structure",
             "type": "object",
             "required": [
                 "scheme",
@@ -5086,10 +5669,10 @@
                 {
                     "title": "rsaSSA",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "rsaSSA"
+                                "rsaSSA","rsassa","RSASSA"
                             ]
                         },
                         "details": {
@@ -5101,10 +5684,10 @@
                 {
                     "title": "rsaPSS",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "rsaPSS"
+                                "rsaPSS","rsapss","RSAPSS"
                             ]
                         },
                         "details": {
@@ -5116,10 +5699,10 @@
                 {
                     "title": "ecdsa",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "ecdsa"
+                                "ecdsa","ECDSA"
                             ]
                         },
                         "details": {
@@ -5131,10 +5714,10 @@
                 {
                     "title": "ecdaa",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "ecdaa"
+                                "ecdaa","ECDAA"
                             ]
                         },
                         "details": {
@@ -5146,10 +5729,10 @@
                 {
                     "title": "sm2",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "sm2"
+                                "sm2","SM2"
                             ]
                         },
                         "details": {
@@ -5161,10 +5744,10 @@
                 {
                     "title": "ecschnorr",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "ecschnorr"
+                                "ecschnorr","ECSCHNORR"
                             ]
                         },
                         "details": {
@@ -5176,10 +5759,10 @@
                 {
                     "title": "hmac",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "hmac"
+                                "hmac","HMAC"
                             ]
                         },
                         "details": {
@@ -5191,7 +5774,7 @@
                 {
                     "title": "",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
                                 ""
@@ -5200,6 +5783,17 @@
                         "details": {
                             "title": "details",
                             "$ref": "#/definitions/TPMS_SCHEME_HASH"
+                        }
+                    }
+                },
+                {
+                    "title": "null",
+                    "properties": {
+                        "scheme": {
+                            "type": "string",
+                            "enum": [
+                                "null","NULL"
+                            ]
                         }
                     }
                 }
@@ -5219,13 +5813,13 @@
                     "$ref": "#/definitions/TPMS_SCHEME_KDF1_SP800_108"
                 },
                 {
-                    "$ref": "#/definitions/"
+                    "$ref": "#/definitions/TPMS_EMPTY"
                 }
             ]
         },
         "TPMT_KDF_SCHEME": {
             "title": "TPMT_KDF_SCHEME",
-            "description": "Table 156 - Definition of TPMT_KDF_SCHEME StructureTable 156 - Definition of TPMT_KDF_SCHEME Structure",
+            "description": "Definition of TPMT_KDF_SCHEME Structure",
             "type": "object",
             "required": [
                 "scheme",
@@ -5244,10 +5838,10 @@
                 {
                     "title": "mgf1",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "mgf1"
+                                "mgf1","MGF1"
                             ]
                         },
                         "details": {
@@ -5259,10 +5853,10 @@
                 {
                     "title": "kdf1_sp800_56a",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "kdf1_sp800_56a"
+                                "kdf1_sp800_56a","KDF1_SP800_56A"
                             ]
                         },
                         "details": {
@@ -5274,15 +5868,26 @@
                 {
                     "title": "kdf1_sp800_108",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "kdf1_sp800_108"
+                                "kdf1_sp800_108","KDF1_SP800_108"
                             ]
                         },
                         "details": {
                             "title": "details",
                             "$ref": "#/definitions/TPMS_SCHEME_KDF1_SP800_108"
+                        }
+                    }
+                },
+                {
+                    "title": "null",
+                    "properties": {
+                        "scheme": {
+                            "type": "string",
+                            "enum": [
+                                "null","NULL"
+                            ]
                         }
                     }
                 }
@@ -5295,15 +5900,28 @@
             "description": "",
             "enum": [
                 "ecdh",
+                "ECDH",
                 "rsaSSA",
+                "rsassa",
+                "RSASSA",
                 "rsaPSS",
+                "rsapss",
+                "RSAPSS",
                 "ecdsa",
+                "ECDSA",
                 "ecdaa",
+                "ECDAA",
                 "sm2",
+                "SM2",
                 "ecschnorr",
+                "ECSCHNORR",
                 "rsaES",
+                "rsaes",
+                "RSAES",
                 "oaep",
-                "null"
+                "OAEP",
+                "null",
+                "NULL"
             ]
         },
         "TPMU_ASYM_SCHEME": {
@@ -5341,13 +5959,13 @@
                     "$ref": "#/definitions/TPMS_SCHEME_HASH"
                 },
                 {
-                    "$ref": "#/definitions/"
+                    "$ref": "#/definitions/TPMS_EMPTY"
                 }
             ]
         },
         "TPMT_ASYM_SCHEME": {
             "title": "TPMT_ASYM_SCHEME",
-            "description": "Table 159 - Definition of TPMT_ASYM_SCHEME Structure <>Table 159 - Definition of TPMT_ASYM_SCHEME Structure <>",
+            "description": "Definition of TPMT_ASYM_SCHEME Structure <>",
             "type": "object",
             "required": [
                 "scheme",
@@ -5366,10 +5984,10 @@
                 {
                     "title": "ecdh",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "ecdh"
+                                "ecdh","ECDH"
                             ]
                         },
                         "details": {
@@ -5381,10 +5999,10 @@
                 {
                     "title": "rsaSSA",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "rsaSSA"
+                                "rsaSSA","rsassa","RSASSA"
                             ]
                         },
                         "details": {
@@ -5396,10 +6014,10 @@
                 {
                     "title": "rsaPSS",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "rsaPSS"
+                                "rsaPSS","rsapss","RSAPSS"
                             ]
                         },
                         "details": {
@@ -5411,10 +6029,10 @@
                 {
                     "title": "ecdsa",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "ecdsa"
+                                "ecdsa","ECDSA"
                             ]
                         },
                         "details": {
@@ -5426,10 +6044,10 @@
                 {
                     "title": "ecdaa",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "ecdaa"
+                                "ecdaa","ECDAA"
                             ]
                         },
                         "details": {
@@ -5441,10 +6059,10 @@
                 {
                     "title": "sm2",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "sm2"
+                                "sm2","SM2"
                             ]
                         },
                         "details": {
@@ -5456,10 +6074,10 @@
                 {
                     "title": "ecschnorr",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "ecschnorr"
+                                "ecschnorr","ECSCHNORR"
                             ]
                         },
                         "details": {
@@ -5471,10 +6089,10 @@
                 {
                     "title": "rsaES",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "rsaES"
+                                "rsaES","rsaes","RSAES"
                             ]
                         },
                         "details": {
@@ -5486,10 +6104,10 @@
                 {
                     "title": "oaep",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "oaep"
+                                "oaep","OAEP"
                             ]
                         },
                         "details": {
@@ -5501,7 +6119,7 @@
                 {
                     "title": "",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
                                 ""
@@ -5510,6 +6128,17 @@
                         "details": {
                             "title": "details",
                             "$ref": "#/definitions/TPMS_SCHEME_HASH"
+                        }
+                    }
+                },
+                {
+                    "title": "null",
+                    "properties": {
+                        "scheme": {
+                            "type": "string",
+                            "enum": [
+                                "null","NULL"
+                            ]
                         }
                     }
                 }
@@ -5522,10 +6151,18 @@
             "description": "",
             "enum": [
                 "rsaES",
+                "rsaes",
+                "RSAES",
                 "oaep",
+                "OAEP",
                 "rsaSSA",
+                "rsassa",
+                "RSASSA",
                 "rsaPSS",
-                "null"
+                "rsapss",
+                "RSAPSS",
+                "null",
+                "NULL"
             ]
         },
         "TPMT_RSA_SCHEME": {
@@ -5533,8 +6170,7 @@
             "description": "Signing scheme for RSA keys used for policy signing.",
             "type": "object",
             "required": [
-                "scheme",
-                "details"
+                "scheme"
             ],
             "properties": {
                 "scheme": {
@@ -5542,17 +6178,17 @@
                 },
                 "details": {
                     "title": "details",
-                    "$ref": "#/definitions/TPMU_ASYM_SCHEME"
+                    "$ref": "#/definitions/TPMU_RSA_SCHEME"
                 }
             },
             "oneOf": [
                 {
                     "title": "rsaPSS",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "rsaPSS"
+                                "rsaPSS", "rsapss"
                             ]
                         },
                         "details": {
@@ -5561,14 +6197,13 @@
                         }
                     }
                 },
-
                 {
                     "title": "rsaSSA",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "rsaSSA"
+                                "rsaSSA", "rsassa"
                             ]
                         },
                         "details": {
@@ -5576,8 +6211,18 @@
                             "$ref": "#/definitions/TPMS_SIG_SCHEME_RSASSA"
                         }
                     }
+                },
+                {
+                    "title": "null",
+                    "properties": {
+                        "scheme": {
+                            "type": "string",
+                            "enum": [
+                                "null", "NULL"
+                            ]
+                        }
+                    }
                 }
-                
             ]
         },
         "TPMI_ALG_RSA_DECRYPT": {
@@ -5587,13 +6232,17 @@
             "description": "",
             "enum": [
                 "rsaES",
+                "rsaes",
+                "RSAES",
                 "oaep",
-                "null"
+                "OAEP",
+                "null",
+                "NULL"
             ]
         },
         "TPMT_RSA_DECRYPT": {
             "title": "TPMT_RSA_DECRYPT",
-            "description": "",
+            "description": "Definition of  TPMT_RSA_DECRYPT Structure",
             "type": "object",
             "required": [
                 "scheme",
@@ -5612,10 +6261,10 @@
                 {
                     "title": "ecdh",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "ecdh"
+                                "ecdh","ECDH"
                             ]
                         },
                         "details": {
@@ -5627,10 +6276,10 @@
                 {
                     "title": "rsaSSA",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "rsaSSA"
+                                "rsaSSA","rsassa","RSASSA"
                             ]
                         },
                         "details": {
@@ -5642,10 +6291,10 @@
                 {
                     "title": "rsaPSS",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "rsaPSS"
+                                "rsaPSS","rsapss","RSAPSS"
                             ]
                         },
                         "details": {
@@ -5657,10 +6306,10 @@
                 {
                     "title": "ecdsa",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "ecdsa"
+                                "ecdsa","ECDSA"
                             ]
                         },
                         "details": {
@@ -5672,10 +6321,10 @@
                 {
                     "title": "ecdaa",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "ecdaa"
+                                "ecdaa","ECDAA"
                             ]
                         },
                         "details": {
@@ -5687,10 +6336,10 @@
                 {
                     "title": "sm2",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "sm2"
+                                "sm2","SM2"
                             ]
                         },
                         "details": {
@@ -5702,10 +6351,10 @@
                 {
                     "title": "ecschnorr",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "ecschnorr"
+                                "ecschnorr","ECSCHNORR"
                             ]
                         },
                         "details": {
@@ -5717,10 +6366,10 @@
                 {
                     "title": "rsaES",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "rsaES"
+                                "rsaES","rsaes","RSAES"
                             ]
                         },
                         "details": {
@@ -5732,10 +6381,10 @@
                 {
                     "title": "oaep",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "oaep"
+                                "oaep","OAEP"
                             ]
                         },
                         "details": {
@@ -5747,7 +6396,7 @@
                 {
                     "title": "",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
                                 ""
@@ -5758,21 +6407,33 @@
                             "$ref": "#/definitions/TPMS_SCHEME_HASH"
                         }
                     }
+                },
+                {
+                    "title": "null",
+                    "properties": {
+                        "scheme": {
+                            "type": "string",
+                            "enum": [
+                                "null","NULL"
+                            ]
+                        }
+                    }
                 }
             ]
         },
         "TPMI_RSA_KEY_BITS": {
             "title": "TPMI_RSA_KEY_BITS",
-            "default": "TPM2_RSA_KEY_SIZES_BITS",
-            "type": "string",
+            "default": 2048,
+            "type": "number",
             "description": "",
             "enum": [
-                "TPM2_RSA_KEY_SIZES_BITS"
+                1024,
+                2048
             ]
         },
         "TPMS_ECC_POINT": {
             "title": "TPMS_ECC_POINT",
-            "description": "Table 168 - Definition of Table 168 - Definition of  TPMS_ECC_POINT Structure",
+            "description": "Definition of  TPMS_ECC_POINT Structure",
             "type": "object",
             "required": [
                 "x",
@@ -5793,7 +6454,7 @@
         },
         "TPM2B_ECC_POINT": {
             "title": "TPM2B_ECC_POINT",
-            "description": "Table 169 - Definition of Table 169 - Definition of  TPM2B_ECC_POINT Structure",
+            "description": "Definition of  TPM2B_ECC_POINT Structure",
             "type": "object",
             "required": [
                 "size",
@@ -5821,11 +6482,17 @@
             "description": "",
             "enum": [
                 "ecdsa",
+                "ECDSA",
                 "ecdaa",
+                "ECDAA",
                 "sm2",
+                "SM2",
                 "ecschnorr",
+                "ECSCHNORR",
                 "ecdh",
-                "null"
+                "ECDH",
+                "null",
+                "NULL"
             ]
         },
         "TPMI_ECC_CURVE": {
@@ -5834,12 +6501,13 @@
             "type": "string",
             "description": "",
             "enum": [
-                "TPM2_ECC_CURVES"
+                "TPM2_ECC_CURVES",
+                "tpm2_ecc_curves"
             ]
         },
         "TPMT_ECC_SCHEME": {
             "title": "TPMT_ECC_SCHEME",
-            "description": "Table 172 - Definition of (TPMT_SIG_SCHEME) Table 172 - Definition of (TPMT_SIG_SCHEME)  TPMT_ECC_SCHEME Structure",
+            "description": "Definition of (TPMT_SIG_SCHEME)  TPMT_ECC_SCHEME Structure",
             "type": "object",
             "required": [
                 "scheme",
@@ -5858,10 +6526,10 @@
                 {
                     "title": "ecdh",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "ecdh"
+                                "ecdh","ECDH"
                             ]
                         },
                         "details": {
@@ -5873,10 +6541,10 @@
                 {
                     "title": "rsaSSA",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "rsaSSA"
+                                "rsaSSA","rsassa","RSASSA"
                             ]
                         },
                         "details": {
@@ -5888,10 +6556,10 @@
                 {
                     "title": "rsaPSS",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "rsaPSS"
+                                "rsaPSS","rsapss","RSAPSS"
                             ]
                         },
                         "details": {
@@ -5903,10 +6571,10 @@
                 {
                     "title": "ecdsa",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "ecdsa"
+                                "ecdsa","ECDSA"
                             ]
                         },
                         "details": {
@@ -5918,10 +6586,10 @@
                 {
                     "title": "ecdaa",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "ecdaa"
+                                "ecdaa","ECDAA"
                             ]
                         },
                         "details": {
@@ -5933,10 +6601,10 @@
                 {
                     "title": "sm2",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "sm2"
+                                "sm2","SM2"
                             ]
                         },
                         "details": {
@@ -5948,10 +6616,10 @@
                 {
                     "title": "ecschnorr",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "ecschnorr"
+                                "ecschnorr","ECSCHNORR"
                             ]
                         },
                         "details": {
@@ -5963,10 +6631,10 @@
                 {
                     "title": "rsaES",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "rsaES"
+                                "rsaES","rsaes","RSAES"
                             ]
                         },
                         "details": {
@@ -5978,10 +6646,10 @@
                 {
                     "title": "oaep",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
-                                "oaep"
+                                "oaep","OAEP"
                             ]
                         },
                         "details": {
@@ -5993,7 +6661,7 @@
                 {
                     "title": "",
                     "properties": {
-                        "scheme": { 
+                        "scheme": {
                             "type": "string",
                             "enum": [
                                 ""
@@ -6004,12 +6672,23 @@
                             "$ref": "#/definitions/TPMS_SCHEME_HASH"
                         }
                     }
+                },
+                {
+                    "title": "null",
+                    "properties": {
+                        "scheme": {
+                            "type": "string",
+                            "enum": [
+                                "null","NULL"
+                            ]
+                        }
+                    }
                 }
             ]
         },
         "TPMS_ALGORITHM_DETAIL_ECC": {
             "title": "TPMS_ALGORITHM_DETAIL_ECC",
-            "description": "Table 173 - Definition of Table 173 - Definition of  TPMS_ALGORITHM_DETAIL_ECC Structure OUT",
+            "description": "Definition of  TPMS_ALGORITHM_DETAIL_ECC Structure OUT",
             "type": "object",
             "required": [
                 "curveID",
@@ -6085,7 +6764,7 @@
         },
         "TPMS_SIGNATURE_RSA": {
             "title": "TPMS_SIGNATURE_RSA",
-            "description": "Table 174 - Definition of Table 174 - Definition of  TPMS_SIGNATURE_RSA Structure",
+            "description": "Definition of  TPMS_SIGNATURE_RSA Structure",
             "type": "object",
             "required": [
                 "hash",
@@ -6106,7 +6785,7 @@
         },
         "TPMS_SIGNATURE_ECC": {
             "title": "TPMS_SIGNATURE_ECC",
-            "description": "Table 176 - Definition of Table 176 - Definition of  TPMS_SIGNATURE_ECC Structure",
+            "description": "Definition of  TPMS_SIGNATURE_ECC Structure",
             "type": "object",
             "required": [
                 "hash",
@@ -6160,13 +6839,13 @@
                     "$ref": "#/definitions/TPMS_SCHEME_HASH"
                 },
                 {
-                    "$ref": "#/definitions/"
+                    "$ref": "#/definitions/TPMS_EMPTY"
                 }
             ]
         },
         "TPMT_SIGNATURE": {
             "title": "TPMT_SIGNATURE",
-            "description": "Table 179 - Definition of TPMT_SIGNATURE StructureTable 179 - Definition of TPMT_SIGNATURE Structure",
+            "description": "Definition of TPMT_SIGNATURE Structure",
             "type": "object",
             "required": [
                 "sigAlg",
@@ -6185,10 +6864,10 @@
                 {
                     "title": "rsaSSA",
                     "properties": {
-                        "sigAlg": { 
+                        "sigAlg": {
                             "type": "string",
                             "enum": [
-                                "rsaSSA"
+                                "rsaSSA","rsassa","RSASSA"
                             ]
                         },
                         "signature": {
@@ -6200,10 +6879,10 @@
                 {
                     "title": "rsaPSS",
                     "properties": {
-                        "sigAlg": { 
+                        "sigAlg": {
                             "type": "string",
                             "enum": [
-                                "rsaPSS"
+                                "rsaPSS","rsapss","RSAPSS"
                             ]
                         },
                         "signature": {
@@ -6215,10 +6894,10 @@
                 {
                     "title": "ecdsa",
                     "properties": {
-                        "sigAlg": { 
+                        "sigAlg": {
                             "type": "string",
                             "enum": [
-                                "ecdsa"
+                                "ecdsa","ECDSA"
                             ]
                         },
                         "signature": {
@@ -6230,10 +6909,10 @@
                 {
                     "title": "ecdaa",
                     "properties": {
-                        "sigAlg": { 
+                        "sigAlg": {
                             "type": "string",
                             "enum": [
-                                "ecdaa"
+                                "ecdaa","ECDAA"
                             ]
                         },
                         "signature": {
@@ -6245,10 +6924,10 @@
                 {
                     "title": "sm2",
                     "properties": {
-                        "sigAlg": { 
+                        "sigAlg": {
                             "type": "string",
                             "enum": [
-                                "sm2"
+                                "sm2","SM2"
                             ]
                         },
                         "signature": {
@@ -6260,10 +6939,10 @@
                 {
                     "title": "ecschnorr",
                     "properties": {
-                        "sigAlg": { 
+                        "sigAlg": {
                             "type": "string",
                             "enum": [
-                                "ecschnorr"
+                                "ecschnorr","ECSCHNORR"
                             ]
                         },
                         "signature": {
@@ -6275,10 +6954,10 @@
                 {
                     "title": "hmac",
                     "properties": {
-                        "sigAlg": { 
+                        "sigAlg": {
                             "type": "string",
                             "enum": [
-                                "hmac"
+                                "hmac","HMAC"
                             ]
                         },
                         "signature": {
@@ -6290,7 +6969,7 @@
                 {
                     "title": "",
                     "properties": {
-                        "sigAlg": { 
+                        "sigAlg": {
                             "type": "string",
                             "enum": [
                                 ""
@@ -6301,6 +6980,17 @@
                             "$ref": "#/definitions/TPMS_SCHEME_HASH"
                         }
                     }
+                },
+                {
+                    "title": "null",
+                    "properties": {
+                        "sigAlg": {
+                            "type": "string",
+                            "enum": [
+                                "null","NULL"
+                            ]
+                        }
+                    }
                 }
             ]
         },
@@ -6308,15 +6998,6 @@
             "title": "TPMU_ENCRYPTED_SECRET",
             "description": "",
             "oneOf": [
-                {
-                    "$ref": "#/definitions/array"
-                },
-                {
-                    "$ref": "#/definitions/array"
-                },
-                {
-                    "$ref": "#/definitions/array"
-                },
                 {
                     "$ref": "#/definitions/array"
                 }
@@ -6329,18 +7010,19 @@
             "description": "",
             "enum": [
                 "rsa",
+                "RSA",
                 "keyedhash",
+                "KEYEDHASH",
                 "ecc",
-                "symcipher"
+                "ECC",
+                "symcipher",
+                "SYMCIPHER"
             ]
         },
         "TPMU_PUBLIC_ID": {
             "title": "TPMU_PUBLIC_ID",
             "description": "",
             "oneOf": [
-                {
-                    "$ref": "#/definitions/TPM2B_DIGEST"
-                },
                 {
                     "$ref": "#/definitions/TPM2B_DIGEST"
                 },
@@ -6357,7 +7039,7 @@
         },
         "TPMS_KEYEDHASH_PARMS": {
             "title": "TPMS_KEYEDHASH_PARMS",
-            "description": "Table 184 - Definition of TPMS_KEYEDHASH_PARMS StructureTable 184 - Definition of TPMS_KEYEDHASH_PARMS Structure",
+            "description": "Definition of TPMS_KEYEDHASH_PARMS Structure",
             "type": "object",
             "required": [
                 "scheme"
@@ -6372,7 +7054,7 @@
         },
         "TPMS_ASYM_PARMS": {
             "title": "TPMS_ASYM_PARMS",
-            "description": "Table 185 - Definition of TPMS_ASYM_PARMS Structure <>Table 185 - Definition of TPMS_ASYM_PARMS Structure <>",
+            "description": "Definition of TPMS_ASYM_PARMS Structure <>",
             "type": "object",
             "required": [
                 "symmetric",
@@ -6393,7 +7075,7 @@
         },
         "TPMS_RSA_PARMS": {
             "title": "TPMS_RSA_PARMS",
-            "description": "Table 186 - Definition of Table 186 - Definition of  TPMS_RSA_PARMS Structure",
+            "description": "Definition of  TPMS_RSA_PARMS Structure",
             "type": "object",
             "required": [
                 "symmetric",
@@ -6427,7 +7109,7 @@
         },
         "TPMS_ECC_PARMS": {
             "title": "TPMS_ECC_PARMS",
-            "description": "Table 187 - Definition of Table 187 - Definition of  TPMS_ECC_PARMS Structure",
+            "description": "Definition of  TPMS_ECC_PARMS Structure",
             "type": "object",
             "required": [
                 "symmetric",
@@ -6481,7 +7163,7 @@
         },
         "TPMT_PUBLIC_PARMS": {
             "title": "TPMT_PUBLIC_PARMS",
-            "description": "Table 189 - Definition of TPMT_PUBLIC_PARMS StructureTable 189 - Definition of TPMT_PUBLIC_PARMS Structure",
+            "description": "Definition of TPMT_PUBLIC_PARMS Structure",
             "type": "object",
             "required": [
                 "type",
@@ -6500,10 +7182,10 @@
                 {
                     "title": "keyedhash",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
-                                "keyedhash"
+                                "keyedhash","KEYEDHASH"
                             ]
                         },
                         "parameters": {
@@ -6515,10 +7197,10 @@
                 {
                     "title": "symcipher",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
-                                "symcipher"
+                                "symcipher","SYMCIPHER"
                             ]
                         },
                         "parameters": {
@@ -6530,10 +7212,10 @@
                 {
                     "title": "rsa",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
-                                "rsa"
+                                "rsa","RSA"
                             ]
                         },
                         "parameters": {
@@ -6545,10 +7227,10 @@
                 {
                     "title": "ecc",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
-                                "ecc"
+                                "ecc","ECC"
                             ]
                         },
                         "parameters": {
@@ -6560,7 +7242,7 @@
                 {
                     "title": "",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
                                 ""
@@ -6576,7 +7258,7 @@
         },
         "TPMT_PUBLIC": {
             "title": "TPMT_PUBLIC",
-            "description": "Table 190 - Definition of TPMT_PUBLIC StructureTable 190 - Definition of TPMT_PUBLIC Structure",
+            "description": "Definition of TPMT_PUBLIC Structure",
             "type": "object",
             "required": [
                 "type",
@@ -6618,10 +7300,10 @@
                 {
                     "title": "keyedhash",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
-                                "keyedhash"
+                                "keyedhash","KEYEDHASH"
                             ]
                         },
                         "parameters": {
@@ -6633,10 +7315,10 @@
                 {
                     "title": "symcipher",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
-                                "symcipher"
+                                "symcipher","SYMCIPHER"
                             ]
                         },
                         "parameters": {
@@ -6648,10 +7330,10 @@
                 {
                     "title": "rsa",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
-                                "rsa"
+                                "rsa","RSA"
                             ]
                         },
                         "parameters": {
@@ -6663,10 +7345,10 @@
                 {
                     "title": "ecc",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
-                                "ecc"
+                                "ecc","ECC"
                             ]
                         },
                         "parameters": {
@@ -6678,7 +7360,7 @@
                 {
                     "title": "",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
                                 ""
@@ -6696,10 +7378,10 @@
                 {
                     "title": "keyedhash",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
-                                "keyedhash"
+                                "keyedhash","KEYEDHASH"
                             ]
                         },
                         "unique": {
@@ -6711,10 +7393,10 @@
                 {
                     "title": "symcipher",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
-                                "symcipher"
+                                "symcipher","SYMCIPHER"
                             ]
                         },
                         "unique": {
@@ -6726,10 +7408,10 @@
                 {
                     "title": "rsa",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
-                                "rsa"
+                                "rsa","RSA"
                             ]
                         },
                         "unique": {
@@ -6741,10 +7423,10 @@
                 {
                     "title": "ecc",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
-                                "ecc"
+                                "ecc","ECC"
                             ]
                         },
                         "unique": {
@@ -6756,7 +7438,7 @@
                 {
                     "title": "",
                     "properties": {
-                        "type": { 
+                        "type": {
                             "type": "string",
                             "enum": [
                                 ""
@@ -6772,7 +7454,7 @@
         },
         "TPM2B_PUBLIC": {
             "title": "TPM2B_PUBLIC",
-            "description": "Table 191 - Definition of TPM2B_PUBLIC StructureTable 191 - Definition of TPM2B_PUBLIC Structure",
+            "description": "Definition of TPM2B_PUBLIC Structure",
             "type": "object",
             "required": [
                 "size",
@@ -6815,7 +7497,7 @@
         },
         "TPMT_SENSITIVE": {
             "title": "TPMT_SENSITIVE",
-            "description": "Table 195 - Definition of TPMT_SENSITIVE StructureTable 195 - Definition of TPMT_SENSITIVE Structure",
+            "description": "Definition of TPMT_SENSITIVE Structure",
             "type": "object",
             "required": [
                 "sensitiveType",
@@ -6846,10 +7528,10 @@
                 {
                     "title": "rsa",
                     "properties": {
-                        "sensitiveType": { 
+                        "sensitiveType": {
                             "type": "string",
                             "enum": [
-                                "rsa"
+                                "rsa","RSA"
                             ]
                         },
                         "sensitive": {
@@ -6861,10 +7543,10 @@
                 {
                     "title": "ecc",
                     "properties": {
-                        "sensitiveType": { 
+                        "sensitiveType": {
                             "type": "string",
                             "enum": [
-                                "ecc"
+                                "ecc","ECC"
                             ]
                         },
                         "sensitive": {
@@ -6876,10 +7558,10 @@
                 {
                     "title": "keyedhash",
                     "properties": {
-                        "sensitiveType": { 
+                        "sensitiveType": {
                             "type": "string",
                             "enum": [
-                                "keyedhash"
+                                "keyedhash","KEYEDHASH"
                             ]
                         },
                         "sensitive": {
@@ -6891,10 +7573,10 @@
                 {
                     "title": "symcipher",
                     "properties": {
-                        "sensitiveType": { 
+                        "sensitiveType": {
                             "type": "string",
                             "enum": [
-                                "symcipher"
+                                "symcipher","SYMCIPHER"
                             ]
                         },
                         "sensitive": {
@@ -6906,7 +7588,7 @@
                 {
                     "title": "",
                     "properties": {
-                        "sensitiveType": { 
+                        "sensitiveType": {
                             "type": "string",
                             "enum": [
                                 ""
@@ -6922,7 +7604,7 @@
         },
         "TPM2B_SENSITIVE": {
             "title": "TPM2B_SENSITIVE",
-            "description": "Table 196 - Definition of TPM2B_SENSITIVE Structure IN/OUTTable 196 - Definition of TPM2B_SENSITIVE Structure IN/OUT",
+            "description": "Definition of TPM2B_SENSITIVE Structure IN/OUT",
             "type": "object",
             "required": [
                 "size",
@@ -6944,7 +7626,7 @@
         },
         "_PRIVATE": {
             "title": "_PRIVATE",
-            "description": "Table 197 - Definition of _PRIVATE Structure <>Table 197 - Definition of _PRIVATE Structure <>",
+            "description": "Definition of _PRIVATE Structure <>",
             "type": "object",
             "required": [
                 "integrityOuter",
@@ -6971,7 +7653,7 @@
         },
         "TPMS_ID_OBJECT": {
             "title": "TPMS_ID_OBJECT",
-            "description": "Table 199 - Definition of TPMS_ID_OBJECT Structure <>Table 199 - Definition of TPMS_ID_OBJECT Structure <>",
+            "description": "Definition of TPMS_ID_OBJECT Structure <>",
             "type": "object",
             "required": [
                 "integrityHMAC",
@@ -7029,16 +7711,22 @@
             "description": "",
             "enum": [
                 "ordinary",
+                "ORDINARY",
                 "counter",
+                "COUNTER",
                 "bits",
+                "BITS",
                 "extend",
+                "EXTEND",
                 "pin_fail",
-                "pin_pass"
+                "PIN_FAIL",
+                "pin_pass",
+                "PIN_PASS"
             ]
         },
         "TPMS_NV_PIN_COUNTER_PARAMETERS": {
             "title": "TPMS_NV_PIN_COUNTER_PARAMETERS",
-            "description": "Table 203 - Definition of TPMS_NV_PIN_COUNTER_PARAMETERS StructureTable 203 - Definition of TPMS_NV_PIN_COUNTER_PARAMETERS Structure",
+            "description": "Definition of TPMS_NV_PIN_COUNTER_PARAMETERS Structure",
             "type": "object",
             "required": [
                 "pinCount",
@@ -7074,7 +7762,6 @@
                             "authwrite",
                             "policywrite",
                             "TPM2_NT",
-                            "Reserved1",
                             "policy_delete",
                             "writelocked",
                             "writeall",
@@ -7085,7 +7772,6 @@
                             "ownerread",
                             "authread",
                             "policyread",
-                            "Reserved2",
                             "no_da",
                             "orderly",
                             "clear_stclear",
@@ -7121,11 +7807,6 @@
                         },
                         "TPM2_NT": {
                             "title": "TPM2_NT",
-                            "description": "${description}",
-                            "$ref": "#/definitions/BOOL"
-                        },
-                        "Reserved1": {
-                            "title": "Reserved1",
                             "description": "${description}",
                             "$ref": "#/definitions/BOOL"
                         },
@@ -7179,11 +7860,6 @@
                             "description": "${description}",
                             "$ref": "#/definitions/BOOL"
                         },
-                        "Reserved2": {
-                            "title": "Reserved2",
-                            "description": "${description}",
-                            "$ref": "#/definitions/BOOL"
-                        },
                         "no_da": {
                             "title": "no_da",
                             "description": "${description}",
@@ -7225,7 +7901,7 @@
         },
         "TPMS_NV_PUBLIC": {
             "title": "TPMS_NV_PUBLIC",
-            "description": "Table 205 - Definition of TPMS_NV_PUBLIC StructureTable 205 - Definition of TPMS_NV_PUBLIC Structure",
+            "description": "Definition of TPMS_NV_PUBLIC Structure",
             "type": "object",
             "required": [
                 "nvIndex",
@@ -7265,7 +7941,7 @@
         },
         "TPM2B_NV_PUBLIC": {
             "title": "TPM2B_NV_PUBLIC",
-            "description": "Table 206 - Definition of TPM2B_NV_PUBLIC StructureTable 206 - Definition of TPM2B_NV_PUBLIC Structure",
+            "description": "Definition of TPM2B_NV_PUBLIC Structure",
             "type": "object",
             "required": [
                 "size",
@@ -7287,7 +7963,7 @@
         },
         "TPMS_CONTEXT_DATA": {
             "title": "TPMS_CONTEXT_DATA",
-            "description": "Table 208 - Definition of TPMS_CONTEXT_DATA Structure IN/OUT STable 208 - Definition of TPMS_CONTEXT_DATA Structure IN/OUT S",
+            "description": "Definition of TPMS_CONTEXT_DATA Structure IN/OUT S",
             "type": "object",
             "required": [
                 "integrity",
@@ -7308,7 +7984,7 @@
         },
         "TPMS_CONTEXT": {
             "title": "TPMS_CONTEXT",
-            "description": "Table 210 - Definition of TPMS_CONTEXT StructureTable 210 - Definition of TPMS_CONTEXT Structure",
+            "description": "Definition of TPMS_CONTEXT Structure",
             "type": "object",
             "required": [
                 "sequence",
@@ -7342,7 +8018,7 @@
         },
         "TPMS_CREATION_DATA": {
             "title": "TPMS_CREATION_DATA",
-            "description": "Table 212 - Definition of TPMS_CREATION_DATA Structure OUTTable 212 - Definition of TPMS_CREATION_DATA Structure OUT",
+            "description": "Definition of TPMS_CREATION_DATA Structure OUT",
             "type": "object",
             "required": [
                 "pcrSelect",
@@ -7393,7 +8069,7 @@
         },
         "TPM2B_CREATION_DATA": {
             "title": "TPM2B_CREATION_DATA",
-            "description": "Table 213 - Definition of TPM2B_CREATION_DATA Structure OUTTable 213 - Definition of TPM2B_CREATION_DATA Structure OUT",
+            "description": "Definition of TPM2B_CREATION_DATA Structure OUT",
             "type": "object",
             "required": [
                 "size",
@@ -7454,5 +8130,4 @@
             }
         }
     }
-    
 }
