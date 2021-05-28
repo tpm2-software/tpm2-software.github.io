@@ -31,7 +31,7 @@ permalink: /software/
 - WireGuard
 - Tinc
 - NetworkManager/wpa_supplicant 802.1X
-- gnome-keyring
+- libsecret/gnome-keyring [WIP at GSOC](https://gitlab.gnome.org/Teams/Engagement/gsoc-2021/-/issues/13)
 - KDE wallet
 - GNU-TLS
 - certbot (to create Certs with PKCS11 support)
