@@ -25,6 +25,7 @@ permalink: /software/
 - [ESAPI Rust Wrapper](https://crates.io/crates/tss-esapi) [Docs](https://docs.rs/tss-esapi/1.0.1/tss_esapi/)
 - [tpm2-pytss](https://github.com/tpm2-software/tpm2-pytss) [![PyPI version](https://img.shields.io/pypi/v/tpm2-pytss.svg)](https://pypi.org/project/tpm2-pytss)
 - [TPM-JS](https://google.github.io/tpm-js/)
+- [TPM-GO](https://github.com/google/go-tpm)
 
 # Projects requiring TPM 2.0 support
 - OpenVPN
