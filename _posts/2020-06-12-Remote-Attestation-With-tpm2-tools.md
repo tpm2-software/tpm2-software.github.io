@@ -260,7 +260,7 @@ tpm2_pcrread sha1:0,1,2+sha256:0,1,2
 # Let's see how we got one of these values as a demonstration of PCR extension.
 INITIAL_SHA1_DATA="0000000000000000000000000000000000000000"
 CONCATENATED=`echo -ne $INITIAL_SHA1_DATA; echo $SHA1_DATA`
-echo $CONCATENATE | xxd -r -p | openssl dgst -sha1
+echo $CONCATENATED | xxd -r -p | openssl dgst -sha1
 # This should output 0xA3EBF00F6520B2C85DBBF3D32B6A8B3A30ABB748
 ```
 
