@@ -217,13 +217,6 @@ Solution:<br>
 a. Seal the secret into a TPM device.<br>
 b. Unseal the secret in memory and pass it to cryptsetup.<br>
 
-Please note that there is an upstreaming effort in the cryptsetup
-[feature-branch](https://gitlab.com/cryptsetup/cryptsetup/-/tree/wip-tpm) to
-enable tpm2 as a key protector built natively in to libcryptsetup as well as
-cryptsetup. It does so by adding a new keyslot-handler internally and extending
-the libcryptsetup API. In this tutorial however, we will be using tpm2-tools
-with cryptsetup that does not have built-in tpm2 support.<br>
-
 Let's start with creating and persisting a sealing object and sealing a random
 byte sequence as the disk key.<br>
 26. `tpm2_createprimary -Q -C o -c prim.ctx`<br>
