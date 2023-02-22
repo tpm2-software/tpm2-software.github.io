@@ -34,10 +34,10 @@ permalink: /software/
 - NGINX via [OpenSSL tpm2-tss-egnine](https://github.com/tpm2-software/tpm2-tss-engine) [Demo](https://youtu.be/NFQ22SBlejk?t=604)
 - SSH via [tpm2-PKCS11](https://github.com/tpm2-software/tpm2-pkcs11) [Demo](https://youtu.be/NFQ22SBlejk?t=944)
 - GIT via SSH and [tpm2-PKCS11](https://github.com/tpm2-software/tpm2-pkcs11) [Demo](https://youtu.be/NFQ22SBlejk?t=944)
+- OpenVPN 2.6.0 and later via OpenSSL 3.x and [tpm2-openssl](https://github.com/tpm2-software/tpm2-openssl)
 - TODO (add links to demos): Firefox, Chromium, Thunderbird, Evolution, JDK-Keystore, wpa_supplicant, GNU-TLS (all via tpm2-pkcs11)
 
 # Ideas for adding TPM 2.0 support
-- OpenVPN
 - WireGuard
 - Tinc
 - NetworkManager/wpa_supplicant 802.1X
