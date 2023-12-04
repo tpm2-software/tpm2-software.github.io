@@ -175,7 +175,7 @@ provided as a password just in time (default) and or specified as key file
 managing LUKS volumes.<br>
 
 Let's setup a new LUKS volume with a simple passphrase as key protector:<br>
-12. `dd if=/dev/zero of=enc.disk bs=1M count=10`<br>
+12. `dd if=/dev/zero of=enc.disk bs=1M count=20`<br>
 13. `dd if=/dev/urandom of=disk.key bs=1 count=32`<br>
 14. `loopdevice=$(losetup -f) && sudo losetup $loopdevice enc.disk`<br>
 15. `sudo cryptsetup luksFormat --key-file=disk.key $loopdevice`<br>
