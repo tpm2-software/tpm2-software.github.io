@@ -15,7 +15,7 @@ title: ""
 
 # Welcome to the tpm2-software community page.
 
-This is the come for information related to the use of the TPM2 using the TPM2
+This is the home for information related to the use of the TPM2 using the TPM2
 Software Stack. We collect links to [software](https://tpm2-software.github.io/software/)
 that already contains support for TPM2 as well as ideas for [software](https://tpm2-software.github.io/software/)
 the might benefit from TPM2 support. We provide links to [external](https://tpm2-software.github.io/external/)
