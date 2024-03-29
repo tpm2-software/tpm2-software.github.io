@@ -620,8 +620,8 @@ The sequence diagram below shown the interactions during this stage.
 At this stage, by validating the “SERVICE-TOKEN“ and the attestation-quote it
 received from the “Device-Node“, the “Service-Provider“ has ascertained the
 “Device-Node“ anonymous identity and system-software state. With the system in
-a known state, the “Service-Provider“ can now wrap the “SERVICE-SECRET“ with the
-AIK Public Key.
+a known state, the “Service-Provider“ can now wrap the “SERVICE-SECRET“ with a service-content-key signed by the
+device AIK.<br>
 
 ![Service-delivery](/images/tpm2-attestation-demo/service-delivery.png)
 
@@ -873,12 +873,17 @@ device_registration() {
     tpm2_createek --ek-context rsa_ek.ctx --key-algorithm rsa \
     --public rsa_ek.pub -Q
 
-    tpm2_startauthsession -S session.ctx --policy-session -Q
-    tpm2_policysecret -S session.ctx -c e -Q
-    tpm2_create -C rsa_ek.ctx -c rsa_ak.ctx -u rsa_ak.pub -r rsa_ak.priv \
-    -P session:session.ctx -Q
-    tpm2_readpublic -c rsa_ak.ctx -f pem -o rsa_ak.pub -n rsa_ak.name -Q
-    tpm2_flushcontext session.ctx -Q
+    tpm2_createak \
+        --ek-context rsa_ek.ctx \
+        --ak-context rsa_ak.ctx \
+        --key-algorithm rsa \
+        --hash-algorithm sha256 \
+        --signing-algorithm rsassa \
+        --public rsa_ak.pub \
+        --private rsa_ak.priv \
+        --ak-name rsa_ak.name \
+        -Q
+    tpm2_readpublic -c rsa_ak.ctx -f pem -o rsa_ak.pub -Q
 
     touch fake_ek_certificate.txt
 
@@ -1023,7 +1028,7 @@ process_device_software_state_validation_request() {
     --pcr-list "$pcr_selection" \
     --pcr pcr.bin -Q
 
-    cp attestation_quote.dat attestation_quote.signature \
+    cp attestation_quote.dat attestation_quote.signature pcr.bin \
     $service_provider_location/.
 
     return 0
@@ -1042,7 +1047,7 @@ process_encrypted_service_data_content() {
     event_file_found=0
 
     service_data_status_string="Decryption of service-data-content receipt from Service-Provider"
-    tpm2 rsadecrypt -c rsa_ak.ctx -o s_d_service_content.decrypted \
+    tpm2 rsadecrypt -c service_content_key.ctx -o s_d_service_content.decrypted \
     s_d_service_content.encrypted -Q
     if [ $? == 1 ];then
         LOG_ERROR "$service_data_status_string"
@@ -1054,6 +1059,34 @@ process_encrypted_service_data_content() {
     SERVICE_CONTENT=`cat s_d_service_content.decrypted`
     LOG_INFO "Service-content: \e[5m$SERVICE_CONTENT"
     rm -f s_d_service_content.*
+
+    return 0
+}
+
+process_generate_service_content_key() {
+
+    tpm2_create \
+        -C n \
+        -c service_content_key.ctx \
+        -u service_content_key.pub \
+        -r service_content_key.priv \
+        -Q
+
+    tpm2_readpublic \
+        -c service_content_key.ctx \
+        -f pem \
+        -o d_s_service_content_key.pub \
+        -Q
+    cp d_s_service_content_key.pub $service_provider_location/.
+
+    tpm2_sign \
+        -c rsa_ak.ctx \
+        -g sha256 \
+        -s rsassa \
+        -f plain \
+        -o d_s_service_content_key_pub.sig \
+        d_s_service_content_key.pub
+    cp d_s_service_content_key_pub.sig $service_provider_location/.
 
     return 0
 }
@@ -1070,6 +1103,14 @@ request_device_service() {
 
     request_service_status_string="Device software state validation"
     process_device_software_state_validation_request
+    if [ $? == 1 ];then
+        LOG_ERROR "$request_service_status_string"
+        return 1
+    fi
+    LOG_INFO "$request_service_status_string"
+
+    request_service_status_string="Generating certified service key"
+    process_generate_service_content_key
     if [ $? == 1 ];then
         LOG_ERROR "$request_service_status_string"
         return 1
@@ -1355,6 +1396,43 @@ system_software_state_validation() {
    return 0
 }
 
+device_service_content_key_validation() {
+   request_service_content_key_string="Retrieving service content key from device"
+   max_wait=60
+   wait_loop $max_wait d_s_service_content_key.pub
+   if [ $event_file_found == 0 ];then
+       LOG_ERROR "$request_service_content_key_string"
+       return 1
+   fi
+   event_file_found=0
+   LOG_INFO "$request_service_content_key_string"
+
+   max_wait=60
+   wait_loop $max_wait d_s_service_content_key_pub.sig
+   if [ $event_file_found == 0 ];then
+       LOG_ERROR "$request_service_content_key_string"
+       return 1
+   fi
+   event_file_found=0
+   LOG_INFO "$request_service_content_key_string"
+
+   openssl dgst -sha256 -binary d_s_service_content_key.pub > service_content_key.pub.digest
+
+   openssl pkeyutl \
+      -verify \
+      -in service_content_key.pub.digest \
+      -sigfile d_s_service_content_key_pub.sig \
+      -pubin \
+      -inkey d_s_service_aik.pub \
+      -keyform pem \
+      -pkeyopt digest:sha256
+   if [ $? == 1 ];then
+      return 1
+   fi
+
+   return 0
+}
+
 request_device_service() {
    # Start device service registration with device identity challenge
    request_device_service_status_string="Anonymous identity validation by Privacy-CA."
@@ -1376,13 +1454,25 @@ request_device_service() {
    fi
    LOG_INFO "$request_device_service_status_string"
 
+   # Verify service content key from the device
+   request_device_service_status_string="Device service content key validation."
+   device_service_content_key_validation
+   if [ $? == 1 ];then
+      LOG_ERROR "$request_device_service_status_string"
+      rm -f d_s_service_aik.pub
+      rm -f d_s_service_content_key.pub
+      return 1
+   fi
+   LOG_INFO "$request_device_service_status_string"
+
    # Encrypt service data content and deliver
    echo "$SERVICE_CONTENT" > service-content.plain
-    openssl rsautl -encrypt -inkey d_s_service_aik.pub -pubin \
+    openssl rsautl -encrypt -inkey d_s_service_content_key.pub -pubin \
     -in service-content.plain -out s_d_service_content.encrypted
 
     cp s_d_service_content.encrypted $device_location/.
     rm -f d_s_service_aik.pub
+    rm -f d_s_service_content_key.pub
     rm -f s_d_service_content.encrypted
     rm -f service-content.plain
     LOG_INFO "Sending service-content: \e[5m$SERVICE_CONTENT"
@@ -1505,9 +1595,13 @@ credential_challenge() {
     loaded_key_name=`cat rsa_ak.name | xxd -p -c $file_size`
 
     echo "this is my secret" > file_input.data
-    tpm2_makecredential --tcti none --encryption-key rsa_ek.pub \
-    --secret file_input.data --name $loaded_key_name \
-    --credential-blob cred.out
+    tpm2_makecredential \
+        --tcti none \
+        --encryption-key rsa_ek.pub \
+        --secret file_input.data \
+        --name $loaded_key_name \
+        --credential-blob cred.out \
+        -Q
     
     cp cred.out $device_location/.
 
@@ -1552,7 +1646,7 @@ process_device_registration_processing_with_device() {
     rm -f d_p_device_ready.txt
 
     cp $device_location/rsa_ek.pub .
-    cp $device_location/rsa_ak.pub .
+    #cp $device_location/rsa_ak.pub .
     cp $device_location/rsa_ak.name .
     LOG_INFO "Received EKcertificate EK and AIK from device"
 
@@ -1721,22 +1815,6 @@ exit 0
    the persistent handle or the context file as an input. In fact, this tool has
    been used in the device-node.sh scripts in this tutorial as well to generate a
    pem formatted file.
-
-2. ***Why is tpm2_createak tool not used to create the AIK in the demo scripts?***
-
-   In our demo example we intend to have an AIK with following properties:
-   a. It will have to be validated for anonymous identity relationship with EK.
-   b. It has to be a signing key for it to be used to sign an attestation quote.
-   c. It has to be usable as RSA encrypt/ decrypt key.
-
-   The combination of the above properties is not the default attributes chosen
-   in the tpm2_createak tool. Specifically, the key generated with tpm2_createak
-   cannot be used as a decryption key.
-   
-   Note that the authorization for using the endorsement key which is the parent
-   of the attestation identity key needs to be satisfied to be able to create
-   the AIK and is satisfied through a policy session using a policy
-   "policysecret" to reference the authorization of the endorsement hierarchy.
 
 # Author
 Imran Desai
