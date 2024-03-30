@@ -107,6 +107,7 @@ Create the RSA key<br>
 1. `tpm2_createprimary --hierarchy=o --key-algorithm=rsa --key-context=prim.ctx`<br>
 
 Save it to the TPM persistent memory<br>
+{:start="2"}
 2. `tpm2_evictcontrol --hierarchy=o --object-context=prim.ctx 0x81010001`<br>
 
 NOTE:
@@ -139,6 +140,7 @@ first setup a disk image without encryption and see if we can extract user
 generated content.<br>
 
 Create a disk image and write some content:<br>
+{:start="3"}
 3. `dd if=/dev/zero of=plain.disk bs=1M count=10`<br>
 4. `mkfs.ext4 plain.disk`<br>
 5. `mkdir -p mountpoint`<br>
@@ -175,6 +177,7 @@ provided as a password just in time (default) and or specified as key file
 managing LUKS volumes.<br>
 
 Let's setup a new LUKS volume with a simple passphrase as key protector:<br>
+{:start="12"}
 12. `dd if=/dev/zero of=enc.disk bs=1M count=10`<br>
 13. `dd if=/dev/urandom of=disk.key bs=1 count=32`<br>
 14. `loopdevice=$(losetup -f) && sudo losetup $loopdevice enc.disk`<br>
@@ -183,11 +186,13 @@ Let's setup a new LUKS volume with a simple passphrase as key protector:<br>
 At this point you have setup the luks volume and it should pop a warning about
 overriding the data. Next let's open the LUKS volume by authenticating with the
 disk.key and complete the setting up the disk with a filesystem.<br>
+{:start="16"}
 16. `sudo cryptsetup luksOpen --key-file=disk.key $loopdevice enc_volume`<br>
 17. `sudo mkfs.ext4 -j /dev/mapper/enc_volume`<br>
 18. `sudo mount /dev/mapper/enc_volume mountpoint`<br>
 
 Now lets create a plain text file again and add user content to it:<br>
+{:start="16"}
 19. `sudo touch mountpoint/plain.txt`<br>
 20. `sudo chmod 777 mountpoint/plain.txt`<br>
 21. `sudo echo "This is my plain text" > mountpoint/plain.txt`<br>
@@ -197,6 +202,7 @@ Now lets create a plain text file again and add user content to it:<br>
 
 You will now see that you cannot dump the information from the disk image simply
 : <br>
+{:start="25"}
 25. `strings enc.disk | grep -i plain`<br>
 
 NOTE:
@@ -219,6 +225,7 @@ b. Unseal the secret in memory and pass it to cryptsetup.<br>
 
 Let's start with creating and persisting a sealing object and sealing a random
 byte sequence as the disk key.<br>
+{:start="26"}
 26. `tpm2_createprimary -Q -C o -c prim.ctx`<br>
 27. `dd if=/dev/urandom bs=1 count=32 status=none | tpm2_create -Q -g sha256 -u seal.pub -r seal.priv -i- -C prim.ctx`<br>
 28. `tpm2_load -Q -C prim.ctx -u seal.pub -r seal.priv -n seal.name -c seal.ctx`<br>
@@ -226,19 +233,23 @@ byte sequence as the disk key.<br>
 
 Now lets change the authentication from previously created disk.key to the new
 sealed secret and after that shred the disk.key since it's no longer useful:<br>
+{:start="30"}
 30. `tpm2_unseal -Q -c 0x81010001 | sudo cryptsetup luksChangeKey enc.disk --key-file disk.key`<br>
 31. `shred disk.key; rm -f disk.key`<br>
 
 Now let's mount the volume with the new authentication sealed up in the tpm:<br>
+{:start="32"}
 32. `sudo losetup $loopdevice enc.disk`<br>
 33. `tpm2_unseal -Q -c 0x81010001 |sudo cryptsetup luksOpen --key-file=- $loopdevice enc_volume`<br>
 34. `sudo mount /dev/mapper/enc_volume mountpoint`<br>
 
 You can now see that disk access is granted with the new secret:<br>
+{:start="35"}
 35. `ls mountpoint`
 <br>
 
 Finally unmount the disk:<br>
+{:start="36"}
 36. `sudo umount mountpoint`<br>
 37. `sudo cryptsetup remove enc_volume`<br>
 38. `sudo losetup -d $loopdevice`<br>
@@ -273,6 +284,7 @@ c. After unsealing the pass-phrase; extend the sealing PCRs so that the
 pass-phrase cannot be unsealed gain.<br>
 
 Let's begin with creating a pcr policy with current value in PCR0 sha256 bank<br>
+{:start="39"}
 39. `tpm2_startauthsession -S session.ctx`<br>
 40. `tpm2_policypcr -Q -S session.ctx -l sha256:0 -L pcr0.sha256.policy`<br>
 41. `tpm2_flushcontext session.ctx`<br>
@@ -280,6 +292,7 @@ Let's begin with creating a pcr policy with current value in PCR0 sha256 bank<br
 Now replace the seal object in TPM NV memory protecting the disk encryption
 secret with a new one that adds the pcr policy we just created as an
 authentication mechanism to access the sealed secret.<br>
+{:start="42"}
 42. `tpm2_unseal -c 0x81010001 | tpm2_create -Q -g sha256 -u pcr_seal_key.pub -r pcr_seal_key.priv -i- -C prim.ctx -L pcr0.sha256.policy `<br>
 43. `tpm2_evictcontrol -C o -c 0x81010001`<br>
 44. `tpm2_load -Q -C prim.ctx -u pcr_seal_key.pub  -r pcr_seal_key.priv -n pcr_seal_key.name -c pcr_seal_key.ctx`<br>
@@ -289,6 +302,7 @@ Now let's try to mount the encrypted disk again but this time the secret is
 unsealed off a TPM object whose unsealing operation can only be accessed by
 satisfying the PCR policy; in other words authenticating by virtue of intended
 system software state being unchanged as reflected by the PCR value.<br>
+{:start="46"}
 46. `sudo losetup $loopdevice enc.disk`<br>
 47. `tpm2_startauthsession --policy-session -S session.ctx `<br>
 48. `tpm2_policypcr -Q -S session.ctx -l sha256:0`<br>
@@ -299,6 +313,7 @@ directly to the cryptsetup app like this --> "tpm2_unseal -p session:session.ctx
 However for the purpose of demonstrating flexible PCR in a later section we will
 make a copy of the unsealed secret at this point to seal it with a new object
 with flexible pcr policy. This breakdown to two steps<br>
+{:start="49"}
 49. `tpm2_unseal -p session:session.ctx -c 0x81010001 > disk_secret.bkup`<br>
 50. `cat disk_secret.bkup | sudo cryptsetup luksOpen --key-file=- $loopdevice enc_volume`<br>
 51. `tpm2_flushcontext session.ctx `<br>
@@ -314,16 +329,19 @@ consequence of failed policy check and thus a failed unsealing attempt.<br>
 
 Let's look at the PCR state prior to extending it and then again after
 extending: <br>
+{:start="54"}
 54. `tpm2_pcrlist -l sha256:0`<br>
 55. `tpm2_pcrextend 0:sha256=0000000000000000000000000000000000000000000000000000000000000000`<br>
 56. `tpm2_pcrlist -l sha256:0`<br>
 
 Now let's try to unseal the sealed disk encryption secret with the dirty
 PCR:<br>
+{:start="57"}
 57. `tpm2_startauthsession --policy-session -S session.ctx `<br>
 58. `tpm2_policypcr -Q -S session.ctx -l sha256:0`<br>
 The following operation should result in policy check failure preventing the
 unseal operation:<br>
+{:start="59"}
 59. `tpm2_unseal -p session:session.ctx -c 0x81010001`<br>
 60. `tpm2_flushcontext session.ctx`<br>
 
@@ -348,6 +366,7 @@ PCR signature. The PCR sets are signed by the system designer and verified by
 the TPM. This is achieved in following steps:
 
 __a. Get the new set of PCR and sign the pcr policy with signer private key.__<br>
+{:start="61"}
 61. `tpm2_startauthsession -S session.ctx`<br>
 62. `tpm2_policypcr -Q -S session.ctx -l sha256:0 -L set2.pcr.policy`<br>
 63. `tpm2_flushcontext session.ctx`<br>
@@ -356,9 +375,11 @@ __a. Get the new set of PCR and sign the pcr policy with signer private key.__<b
 
 We now need the name which is a digest of the TCG public key format of the
 public key to include in the policy. We can use the loadexternal tool for this:<br>
+{:start="66"}
 66. `tpm2_loadexternal -G rsa -C o -u signing_key_public.pem -c signing_key.ctx -n signing_key.name`<br>
 
 Let's now create the signer policy:<br>
+{:start="66"}
 67. `tpm2_startauthsession -S session.ctx`<br>
 68. `tpm2_policyauthorize -S session.ctx -L authorized.policy -n signing_key.name -i set2.pcr.policy`<br>
 69. `tpm2_flushcontext session.ctx`<br>
@@ -367,10 +388,12 @@ Let's create a new sealing object with the authorized policy which will also
 require the sealing secret for which we will use the disk_secret.bkup we created
 at #49 earlier to avoid rebooting the platform to match the PCR we originally
 had prior to extending.<br>
+{:start="70"}
 70. `cat disk_secret.bkup | tpm2_create -g sha256 -u auth_pcr_seal_key.pub -r auth_pcr_seal_key.priv -i- -C prim.ctx -L authorized.policy`<br>
 
 Let's replace the old persistent sealing object with the one we created
 above with policy_authorize policy associated with signer public key:<br>
+{:start="71"}
 71. `tpm2_evictcontrol -C o -c 0x81010001`<br>
 72. `tpm2_load -Q -C prim.ctx -u auth_pcr_seal_key.pub  -r auth_pcr_seal_key.priv -n auth_pcr_seal_key.name -c auth_pcr_seal_key.ctx`<br>
 73. `tpm2_evictcontrol -c auth_pcr_seal_key.ctx 0x81010001 -C o`<br>
@@ -379,15 +402,18 @@ Let's now sign the pcr_policy with the signer private key:<br>
 
 __b. Load the signer public key to the tpm and verify the signature on the pcr 
 and get the tpm verification tkt:__<br>
+{:start="75"}
 75. `tpm2_loadexternal -G rsa -C o -u signing_key_public.pem -c signing_key.ctx -n signing_key.name`<br>
 76. `tpm2_verifysignature -c signing_key.ctx -g sha256 -m set2.pcr.policy  -s set2.pcr.signature -t verification.tkt -f rsassa`<br>
 
 __c. Satisfy the authorized policy and then run policyauthorize:__<br>
+{:start="77"}
 77. `tpm2_startauthsession --policy-session -S session.ctx`<br>
 78. `tpm2_policypcr -l sha256:0 -S session.ctx`<br>
 79. `tpm2_policyauthorize -S session.ctx -i set2.pcr.policy -n signing_key.name -t verification.tkt`<br>
 
 __d. Pipe unseal output to the cryptsetup application:__<br>
+{:start="80"}
 80. `sudo losetup $loopdevice enc.disk`<br>
 81. `tpm2_unseal -p session:session.ctx -c 0x81010001 | sudo cryptsetup luksOpen --key-file=- $loopdevice enc_volume`<br>
 82. `tpm2_flushcontext session.ctx `<br>
