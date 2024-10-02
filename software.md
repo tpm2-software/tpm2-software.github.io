@@ -38,6 +38,7 @@ permalink: /software/
 - TODO (add links to demos): Firefox, Chromium, Thunderbird, Evolution, JDK-Keystore, wpa_supplicant, GNU-TLS (all via tpm2-pkcs11)
 
 # Ideas for adding TPM 2.0 support
+- Passkeys
 - WireGuard
 - Tinc
 - NetworkManager/wpa_supplicant 802.1X
