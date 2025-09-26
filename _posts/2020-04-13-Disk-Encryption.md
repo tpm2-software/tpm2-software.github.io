@@ -157,7 +157,7 @@ find the plain.txt. To do this simply do the following:<br>
 11. `strings plain.disk`<br>
 
 NOTE:
-* Having a week authentication mechanism for login control is not mitigated by
+* Having a weak authentication mechanism for login control is not mitigated by
 disk encryption. Mounted encrypted volumes without user intervention are
 available in clear to the logged in user.
 * Data assets especially storage must remain confidential either with disk/ file
