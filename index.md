@@ -26,7 +26,9 @@ The core software of this community can be found at
 - [https://github.com/tpm2-software](https://github.com/tpm2-software)
 
 The mailing list for this community can be found at
-- [https://lists.linuxfoundation.org/mailman/listinfo/tpm2](https://lists.linuxfoundation.org/mailman/listinfo/tpm2)
+- [https://lore.kernel.org/tpm2/](https://lore.kernel.org/tpm2/)
+- To subscribe write an email to [tpm2+subscribe@lists.linux.dev](tpm2+subscribe@lists.linux.dev) see also [here](https://subspace.kernel.org/subscribing.html)
+
 
 The gitter can be found at the bottom right or at
 - [https://gitter.im/tpm2-software/community](https://gitter.im/tpm2-software/community)
